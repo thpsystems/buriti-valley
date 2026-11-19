@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buriti Valley | Vitrine Oficial de Startups &amp; Inovação de Roraima</title>
+  <meta name="description" content="Plataforma oficial da Buriti Valley: conheça as startups de Roraima, o que fazem, estágio de maturidade, fundadores e o que buscam em investimento e aceleração." />
+  
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Buriti Valley | Vitrine Oficial de Startups &amp; Inovação de Roraima" />
+  <meta property="og:description" content="De Roraima para o mundo: conheça os empreendimentos inovadores em bioeconomia, agrotech, govtech e software da Amazônia Setentrional." />
+  <meta property="og:url" content="https://buritivalley.github.io/" />
+
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="./css/custom.css" />
+
+  <!-- Script de Inicialização de Tema (Evita Flash de Cor) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('bv_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Ambient Meshes & Grids -->
+  <div class="mesh-bg"></div>
+  <div class="mesh-bg-accent"></div>
+  <div class="dot-grid"></div>
+
+  <div class="app-container">
+    <!-- Navbar Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="./" class="brand">
+          <div class="brand-icon">BV</div>
+          <div class="brand-info">
+            <span class="logo-text">BURITI <span>VALLEY</span></span>
+            <span class="logo-subtext" data-i18n="nav_subtext">Comunidade de Startups de Roraima</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" id="nav-links">
+          <a href="#vitrine" class="nav-link active" data-i18n="nav_home">Vitrine</a>
+          <a href="./governanca/" class="nav-link" data-i18n="nav_gov">Governança &amp; Sobre</a>
+          <a href="./conectar/?aba=startup" class="nav-link" data-i18n="nav_submit">Submeter Startup</a>
+          <a href="./conectar/?aba=investidor" class="nav-link" data-i18n="nav_investors">Investidores</a>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Seletor PT / EN -->
+          <div class="lang-switcher">
+            <button class="lang-btn active" id="lang-pt" onclick="switchLanguage('pt')">PT</button>
+            <button class="lang-btn" id="lang-en" onclick="switchLanguage('en')">EN</button>
+          </div>
+
+          <!-- Botão Tema -->
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- Botão Mobile -->
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section com Manifesto -->
+    <section class="hero-section">
+      <div class="hero-manifesto">
+        <div class="hero-pill-wrapper">
+          <span class="pill-badge" data-i18n="hero_pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            Comunidade Oficial de Startups de Roraima
+          </span>
+        </div>
+
+        <h1 class="hero-title" data-i18n="hero_title">
+          De Roraima para o Mundo: A Vitrine da Inovação na Amazônia
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          Descubra, conecte-se e invista nas startups pioneiras que estão transformando a bioeconomia, agronegócio de precisão, saúde e software a partir do extremo norte do Brasil.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#vitrine" class="btn btn-primary" data-i18n="hero_btn_explore">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Explorar Startups
+          </a>
+          <a href="./conectar/?aba=startup" class="btn btn-secondary" data-i18n="hero_btn_submit">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
+            Submeter Startup
+          </a>
+          <a href="./conectar/?aba=investidor" class="btn btn-outline-amber" data-i18n="hero_btn_investor">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Conectar como Investidor
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barra de Métricas Oficiais do Ecossistema (Fonte: Sebrae RR mar/2026) -->
+    <section class="metrics-panel" id="metricas">
+      <div class="metrics-header">
+        <h3 data-i18n="metrics_title">Radiografia do Ecossistema de Startups (ELI Boa Vista &amp; Roraima)</h3>
+        <span class="metrics-source-tag" data-i18n="metrics_source">Fonte: Levantamento Oficial Sebrae Roraima (mar/2026)</span>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-box">
+          <div class="metric-number">126<span>+</span></div>
+          <div class="metric-label" data-i18n="metric_startups_label">Startups Mapeadas</div>
+          <div class="metric-sub" data-i18n="metric_startups_sub">86,5% sediadas na capital Boa Vista</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number">51<span>%</span></div>
+          <div class="metric-label" data-i18n="metric_ideation_label">Em Ideação</div>
+          <div class="metric-sub" data-i18n="metric_ideation_sub">Comunidade densa em novas teses</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number">25,6<span>%</span></div>
+          <div class="metric-label" data-i18n="metric_mvp_label">Em Validação &amp; MVP</div>
+          <div class="metric-sub" data-i18n="metric_mvp_sub">Protótipos em teste de mercado</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number">20<span>%</span></div>
+          <div class="metric-label" data-i18n="metric_traction_label">Em Tração &amp; Escala</div>
+          <div class="metric-sub" data-i18n="metric_traction_sub">Operações comerciais ativas</div>
+        </div>
+      </div>
+
+      <!-- Breakdown de Verticais e Infraestrutura -->
+      <div class="ecosystem-breakdown">
+        <div class="breakdown-item">
+          <h4 data-i18n="breakdown_verticals">Verticais Líderes em Roraima</h4>
+          <div class="tag-cloud">
+            <span class="tag-cloud-item">🌱 Agronegócio <strong>(18%)</strong></span>
+            <span class="tag-cloud-item">🌿 Impacto Socioambiental <strong>(16%)</strong></span>
+            <span class="tag-cloud-item">🍲 Alimentos &amp; Bebidas <strong>(12%)</strong></span>
+            <span class="tag-cloud-item">🏥 Saúde &amp; Bem-estar <strong>(10%)</strong></span>
+            <span class="tag-cloud-item">💻 TI &amp; SaaS <strong>(8%)</strong></span>
+          </div>
+        </div>
+
+        <div class="breakdown-item">
+          <h4 data-i18n="breakdown_network">Rede de Fomento &amp; Hubs Conectados</h4>
+          <div class="tag-cloud">
+            <span class="tag-cloud-item">Centelha RR</span>
+            <span class="tag-cloud-item">Tecnova RR</span>
+            <span class="tag-cloud-item">Inova Amazônia</span>
+            <span class="tag-cloud-item">Incubadora Koneka (IFRR)</span>
+            <span class="tag-cloud-item">Centro de Inovação UFRR</span>
+            <span class="tag-cloud-item">Hub UERR</span>
+            <span class="tag-cloud-item">ConectaHealth</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vitrine Interativa de Startups -->
+    <section class="vitrine-section" id="vitrine">
+      <div class="section-head">
+        <div>
+          <span class="pill-badge pill-badge-amber">Vitrine 2026</span>
+          <h2 class="section-title" data-i18n="vitrine_title">Vitrine Interativa de Startups</h2>
+          <p class="section-desc" data-i18n="vitrine_desc">
+            Utilize a busca textual e os filtros combináveis para encontrar startups por estágio de maturidade, vertical tecnológica ou objetivo de captação e parcerias.
+          </p>
+        </div>
+      </div>
+
+      <!-- Container de Filtros e Busca -->
+      <div class="filters-container">
+        <!-- Input de Busca -->
+        <div class="search-bar-wrapper">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Buscar por nome, vertical, tecnologia, desafio ou fundador..."
+            aria-label="Buscar startups"
+          />
+        </div>
+
+        <!-- Linhas de Filtros Combináveis -->
+        <div class="filter-groups">
+          <!-- Filtro Estágio -->
+          <div class="filter-row">
+            <span class="filter-row-label" data-i18n="filter_stage">Estágio:</span>
+            <div class="filter-chips">
+              <button class="filter-chip active" data-filter-group="estagio" data-filter-val="Todos" data-i18n="filter_all">Todos</button>
+              <button class="filter-chip" data-filter-group="estagio" data-filter-val="Ideação">Ideação</button>
+              <button class="filter-chip" data-filter-group="estagio" data-filter-val="MVP">MVP / Validação</button>
+              <button class="filter-chip" data-filter-group="estagio" data-filter-val="Operação">Operação</button>
+              <button class="filter-chip" data-filter-group="estagio" data-filter-val="Tração">Tração / Escala</button>
+            </div>
+          </div>
+
+          <!-- Filtro Objetivo -->
+          <div class="filter-row">
+            <span class="filter-row-label" data-i18n="filter_goal">Buscando:</span>
+            <div class="filter-chips">
+              <button class="filter-chip active" data-filter-group="objetivo" data-filter-val="Todos" data-i18n="filter_all">Todos</button>
+              <button class="filter-chip" data-filter-group="objetivo" data-filter-val="Investimento">Investimento</button>
+              <button class="filter-chip" data-filter-group="objetivo" data-filter-val="Aceleração">Aceleração</button>
+              <button class="filter-chip" data-filter-group="objetivo" data-filter-val="Parcerias">Parcerias</button>
+            </div>
+          </div>
+
+          <!-- Filtro Vertical -->
+          <div class="filter-row">
+            <span class="filter-row-label" data-i18n="filter_vertical">Vertical:</span>
+            <div class="filter-chips">
+              <button class="filter-chip active" data-filter-group="vertical" data-filter-val="Todas" data-i18n="filter_all_f">Todas</button>
+              <button class="filter-chip" data-filter-group="vertical" data-filter-val="Bioeconomia">Bioeconomia</button>
+              <button class="filter-chip" data-filter-group="vertical" data-filter-val="Agrotech">Agrotech</button>
+              <button class="filter-chip" data-filter-group="vertical" data-filter-val="GovTech">GovTech</button>
+              <button class="filter-chip" data-filter-group="vertical" data-filter-val="SaaS">SaaS/B2B</button>
+              <button class="filter-chip" data-filter-group="vertical" data-filter-val="Saúde">Saúde</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meta Bar de Resultados -->
+        <div class="filter-meta-bar">
+          <span id="results-count">Carregando startups mapeadas...</span>
+          <button class="clear-filters-btn" onclick="clearAllFilters()" data-i18n="filter_clear">Limpar todos os filtros</button>
+        </div>
+      </div>
+
+      <!-- Grid Dinâmico de Startups -->
+      <div class="startups-grid" id="startups-grid">
+        <!-- Injetado dinamicamente via js/main.js -->
+      </div>
+    </section>
+
+    <!-- Seção de CTA Duplo -->
+    <section class="dual-cta-section">
+      <!-- CTA para Fundadores -->
+      <div class="cta-box cta-box-startup">
+        <div class="cta-content">
+          <span class="pill-badge" style="margin-bottom: 1rem;">Para Fundadores</span>
+          <h3 data-i18n="cta_startup_title">Sua Startup em Roraima Precisa de Visibilidade Global?</h3>
+          <p data-i18n="cta_startup_desc">
+            Cadastre sua empresa na vitrine oficial da Buriti Valley, conecte-se a programas de fomento (Centelha, Tecnova, Inova Amazônia) e amplie seu acesso a investidores.
+          </p>
+        </div>
+        <div>
+          <a href="./conectar/?aba=startup" class="btn btn-primary" data-i18n="cta_startup_btn">
+            Cadastrar Startup na Vitrine
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CTA para Investidores -->
+      <div class="cta-box cta-box-investor">
+        <div class="cta-content">
+          <span class="pill-badge pill-badge-amber" style="margin-bottom: 1rem;">Para Investidores &amp; Aceleradoras</span>
+          <h3 data-i18n="cta_investor_title">Investidor, Aceleradora ou Parceiro Corporativo?</h3>
+          <p data-i18n="cta_investor_desc">
+            Acesse deal flow exclusivo de DeepTech, Agrotech e Bioeconomia gerado no centro geográfico do Escudo das Guianas, com apoio institucional da governança ELI Boa Vista.
+          </p>
+        </div>
+        <div>
+          <a href="./conectar/?aba=investidor" class="btn btn-outline-amber" data-i18n="cta_investor_btn">
+            Acessar Deal Flow / Conectar
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé Institucional -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">BV</div>
+            <span class="logo-text">BURITI <span>VALLEY</span></span>
+          </div>
+          <p data-i18n="footer_desc">
+            A comunidade pioneira de startups e inovação de Roraima. Conectando o ecossistema do extremo norte do Brasil aos principais polos de investimento do planeta.
+          </p>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4 data-i18n="footer_col_platform">Plataforma</h4>
+            <ul>
+              <li><a href="#vitrine" data-i18n="nav_home">Vitrine de Startups</a></li>
+              <li><a href="./governanca/" data-i18n="nav_gov">Governança &amp; Sobre</a></li>
+              <li><a href="./conectar/?aba=startup" data-i18n="nav_submit">Submeter Minha Startup</a></li>
+              <li><a href="./conectar/?aba=investidor" data-i18n="nav_investors">Área de Investidores</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer_col_ecosystem">Ecossistema ELI RR</h4>
+            <ul>
+              <li><a href="https://rorainova.rr.gov.br" target="_blank" rel="noopener">Rorainova</a></li>
+              <li><a href="https://ufrr.br" target="_blank" rel="noopener">Centro de Inovação UFRR</a></li>
+              <li><a href="https://ifrr.edu.br" target="_blank" rel="noopener">Incubadora Koneka (IFRR)</a></li>
+              <li><a href="https://sebrae.com.br/roraima" target="_blank" rel="noopener">Sebrae Roraima</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_copy">&copy; 2026 Buriti Valley. Todos os direitos reservados. De Roraima para o Mundo.</span>
+        <span>Membro formal da Governança ELI Boa Vista (11 Instituições)</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

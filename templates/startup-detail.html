@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{STARTUP_NAME}} | Vitrine Buriti Valley</title>
+  <meta name="description" content="{{STARTUP_TAGLINE_PT}}" />
+  <meta property="og:title" content="{{STARTUP_NAME}} — Startups de Roraima | Buriti Valley" />
+  <meta property="og:description" content="{{STARTUP_TAGLINE_PT}}" />
+  <meta property="og:type" content="website" />
+
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="../../css/custom.css" />
+
+  <!-- Inicialização do Tema -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('bv_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Ambient Meshes -->
+  <div class="mesh-bg"></div>
+  <div class="mesh-bg-accent"></div>
+  <div class="dot-grid"></div>
+
+  <div class="app-container">
+    <!-- Navbar Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="../../" class="brand">
+          <div class="brand-icon">BV</div>
+          <div class="brand-info">
+            <span class="logo-text">BURITI <span>VALLEY</span></span>
+            <span class="logo-subtext" data-i18n="nav_subtext">Comunidade de Startups de Roraima</span>
+          </div>
+        </a>
+        <nav class="nav-links" id="nav-links">
+          <a href="../../" class="nav-link" data-i18n="nav_home">Vitrine</a>
+          <a href="../../governanca/" class="nav-link" data-i18n="nav_gov">Governança &amp; Sobre</a>
+          <a href="../../conectar/?aba=startup" class="nav-link" data-i18n="nav_submit">Submeter Startup</a>
+          <a href="../../conectar/?aba=investidor" class="nav-link" data-i18n="nav_investors">Investidores</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="lang-switcher">
+            <button class="lang-btn" id="lang-pt" onclick="switchLanguage('pt')">PT</button>
+            <button class="lang-btn" id="lang-en" onclick="switchLanguage('en')">EN</button>
+          </div>
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dossier-container">
+      <!-- Navegação de Retorno -->
+      <div class="back-nav">
+        <a href="../../" class="back-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span data-i18n="back_to_showcase">Voltar para a Vitrine de Startups</span>
+        </a>
+      </div>
+
+      <article class="dossier-card">
+        <!-- Cabeçalho do Dossiê -->
+        <header class="dossier-header">
+          <div class="dossier-title-row">
+            <div class="dossier-logo">{{STARTUP_INITIALS}}</div>
+            <div>
+              <h1 class="dossier-name">{{STARTUP_NAME}}</h1>
+              <div class="dossier-badges">
+                <span class="badge-stage {{STAGE_CLASS}}">{{STARTUP_STAGE}}</span>
+                <span class="badge-vertical">{{STARTUP_VERTICAL}}</span>
+                <span class="badge-vertical">{{STARTUP_MODEL}}</span>
+                <span class="badge-vertical" style="border-color: rgba(245, 158, 11, 0.4); color: var(--color-accent-amber);">Boa Vista / RR</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="dossier-tagline" id="dossier-tagline">{{STARTUP_TAGLINE_CURRENT}}</p>
+
+          <div class="dossier-links-row">
+            {{LINKS_HTML}}
+          </div>
+        </header>
+
+        <!-- Seção: Sobre a Solução -->
+        <section class="dossier-section">
+          <h2 class="dossier-section-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span data-i18n="section_solution">Sobre a Solução</span>
+          </h2>
+          
+          <div class="solution-grid">
+            <div class="solution-box">
+              <h4 data-i18n="lbl_problem">O Problema</h4>
+              <p id="dossier-problem">{{STARTUP_PROBLEM_CURRENT}}</p>
+            </div>
+            <div class="solution-box">
+              <h4 data-i18n="lbl_solution">A Solução</h4>
+              <p id="dossier-solution">{{STARTUP_SOLUTION_CURRENT}}</p>
+            </div>
+          </div>
+
+          <div class="differential-banner">
+            <h4 data-i18n="lbl_diff">Diferencial Tecnológico &amp; Barreira Competitiva</h4>
+            <p id="dossier-diff">{{STARTUP_DIFF_CURRENT}}</p>
+          </div>
+        </section>
+
+        <!-- Seção: Tração & Validação -->
+        <section class="dossier-section">
+          <h2 class="dossier-section-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <span data-i18n="section_traction">Tração &amp; Validação</span>
+          </h2>
+
+          <div class="differential-banner" style="background: rgba(6, 182, 212, 0.08); border-color: rgba(6, 182, 212, 0.25); margin-bottom: 1.5rem;">
+            <h4 style="color: var(--color-accent-cyan);" data-i18n="lbl_metrics">Métricas &amp; Escala</h4>
+            <p id="dossier-metrics" style="font-weight: 600;">{{STARTUP_METRICS_CURRENT}}</p>
+          </div>
+
+          <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-text-primary);" data-i18n="lbl_awards">Premiações, Editais &amp; Programas de Fomento</h3>
+          <div class="awards-list">
+            {{AWARDS_HTML}}
+          </div>
+        </section>
+
+        <!-- Seção: O que Buscamos Agora -->
+        <section class="seeking-callout">
+          <div class="seeking-callout-header">
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+              <span data-i18n="section_seeking">O que Buscamos Agora</span>
+            </h3>
+            <div style="display: flex; gap: 0.5rem;">
+              {{GOALS_HTML}}
+            </div>
+          </div>
+          <p class="seeking-callout-text" id="dossier-seeking">{{STARTUP_SEEKING_CURRENT}}</p>
+          <div>
+            <a href="../../conectar/?aba=investidor&startup={{STARTUP_SLUG}}" class="btn btn-outline-amber">
+              <span data-i18n="cta_connect_startup">Conectar com os Fundadores</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- Seção: Time Fundador & Membros (People) -->
+        <section class="dossier-section" style="margin-bottom: 0;">
+          <h2 class="dossier-section-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span data-i18n="section_team">Time Fundador &amp; Membros-Chave</span>
+          </h2>
+          <div class="people-grid">
+            {{TEAM_HTML}}
+          </div>
+        </section>
+      </article>
+
+      <!-- Rodapé de Ação do Dossiê -->
+      <div style="text-align: center; margin-top: 3rem;">
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;" data-i18n="dossier_footer_note">
+          Esta startup faz parte do ecossistema mapeado pela Buriti Valley em Roraima.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="../../" class="btn btn-secondary" data-i18n="btn_explore_more">Explorar Outras Startups</a>
+          <a href="../../conectar/?aba=investidor&startup={{STARTUP_SLUG}}" class="btn btn-primary" data-i18n="btn_direct_match">Solicitar Apresentação Executiva</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Geral -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">BV</div>
+            <span class="logo-text">BURITI <span>VALLEY</span></span>
+          </div>
+          <p data-i18n="footer_desc">
+            A comunidade pioneira de startups e inovação de Roraima. Conectando o ecossistema do extremo norte do Brasil aos principais polos de investimento do planeta.
+          </p>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4 data-i18n="footer_col_platform">Plataforma</h4>
+            <ul>
+              <li><a href="../../" data-i18n="nav_home">Vitrine de Startups</a></li>
+              <li><a href="../../governanca/" data-i18n="nav_gov">Governança &amp; Sobre</a></li>
+              <li><a href="../../conectar/?aba=startup" data-i18n="nav_submit">Submeter Minha Startup</a></li>
+              <li><a href="../../conectar/?aba=investidor" data-i18n="nav_investors">Área de Investidores</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer_col_ecosystem">Ecossistema ELI RR</h4>
+            <ul>
+              <li><a href="https://rorainova.rr.gov.br" target="_blank" rel="noopener">Rorainova</a></li>
+              <li><a href="https://ufrr.br" target="_blank" rel="noopener">Centro de Inovação UFRR</a></li>
+              <li><a href="https://ifrr.edu.br" target="_blank" rel="noopener">Incubadora Koneka (IFRR)</a></li>
+              <li><a href="https://sebrae.com.br/roraima" target="_blank" rel="noopener">Sebrae Roraima</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Buriti Valley. Todos os direitos reservados. De Roraima para o Mundo.</span>
+        <span>Desenvolvido sob padrões abertos pela comunidade</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Dados da Startup para renderização dinâmica multilíngue -->
+  <script id="startup-raw-data" type="application/json">
+    {{STARTUP_JSON_RAW}}
+  </script>
+
+  <!-- Script do Dossiê e Suporte Multilíngue -->
+  <script>
+    const translations = {
+      pt: {
+        nav_subtext: "Comunidade de Startups de Roraima",
+        nav_home: "Vitrine",
+        nav_gov: "Governança & Sobre",
+        nav_submit: "Submeter Startup",
+        nav_investors: "Investidores",
+        back_to_showcase: "Voltar para a Vitrine de Startups",
+        section_solution: "Sobre a Solução",
+        lbl_problem: "O Problema",
+        lbl_solution: "A Solução",
+        lbl_diff: "Diferencial Tecnológico & Barreira Competitiva",
+        section_traction: "Tração & Validação",
+        lbl_metrics: "Métricas & Escala",
+        lbl_awards: "Premiações, Editais & Programas de Fomento",
+        section_seeking: "O que Buscamos Agora",
+        cta_connect_startup: "Conectar com os Fundadores",
+        section_team: "Time Fundador & Membros-Chave",
+        lbl_academic: "Formação Acadêmica",
+        dossier_footer_note: "Esta startup faz parte do ecossistema mapeado pela Buriti Valley em Roraima.",
+        btn_explore_more: "Explorar Outras Startups",
+        btn_direct_match: "Solicitar Apresentação Executiva",
+        footer_desc: "A comunidade pioneira de startups e inovação de Roraima. Conectando o ecossistema do extremo norte do Brasil aos principais polos de investimento do planeta.",
+        footer_col_platform: "Plataforma",
+        footer_col_ecosystem: "Ecossistema ELI RR"
+      },
+      en: {
+        nav_subtext: "Roraima Startup & Innovation Community",
+        nav_home: "Showcase",
+        nav_gov: "Governance & About",
+        nav_submit: "Submit Startup",
+        nav_investors: "Investors",
+        back_to_showcase: "Back to Startup Showcase",
+        section_solution: "About the Solution",
+        lbl_problem: "The Problem",
+        lbl_solution: "The Solution",
+        lbl_diff: "Technological Edge & Competitive Moat",
+        section_traction: "Traction & Validation",
+        lbl_metrics: "Metrics & Scale",
+        lbl_awards: "Awards, Grants & Acceleration Programs",
+        section_seeking: "What We Seek Right Now",
+        cta_connect_startup: "Connect with Founders",
+        section_team: "Founding Team & Key Personnel",
+        lbl_academic: "Academic Background",
+        dossier_footer_note: "This startup is officially tracked within the Buriti Valley ecosystem in Roraima, Brazil.",
+        btn_explore_more: "Explore Other Startups",
+        btn_direct_match: "Request Executive Introduction",
+        footer_desc: "The pioneering startup and innovation community of Roraima. Connecting Brazil's Northern Amazon hub to global venture capital ecosystems.",
+        footer_col_platform: "Platform",
+        footer_col_ecosystem: "ELI RR Ecosystem"
+      }
+    };
+
+    let currentLang = localStorage.getItem('bv_lang') || 'pt';
+    const startupData = JSON.parse(document.getElementById('startup-raw-data').textContent);
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('bv_lang', lang);
+      document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+
+      // Atualiza botões
+      document.getElementById('lang-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+
+      // Atualiza labels estáticos com data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      // Atualiza textos dinâmicos da startup
+      const taglineEl = document.getElementById('dossier-tagline');
+      if (taglineEl && startupData.tagline) {
+        taglineEl.textContent = startupData.tagline[lang] || startupData.tagline.pt;
+      }
+
+      const problemEl = document.getElementById('dossier-problem');
+      if (problemEl && startupData.problema) {
+        problemEl.textContent = startupData.problema[lang] || startupData.problema.pt;
+      }
+
+      const solutionEl = document.getElementById('dossier-solution');
+      if (solutionEl && startupData.solucao) {
+        solutionEl.textContent = startupData.solucao[lang] || startupData.solucao.pt;
+      }
+
+      const diffEl = document.getElementById('dossier-diff');
+      if (diffEl && startupData.diferencial) {
+        diffEl.textContent = startupData.diferencial[lang] || startupData.diferencial.pt;
+      }
+
+      const metricsEl = document.getElementById('dossier-metrics');
+      if (metricsEl && startupData.metricas_destaque) {
+        metricsEl.textContent = startupData.metricas_destaque[lang] || startupData.metricas_destaque.pt;
+      }
+
+      const seekingEl = document.getElementById('dossier-seeking');
+      if (seekingEl && startupData.pedido_atual) {
+        seekingEl.textContent = startupData.pedido_atual[lang] || startupData.pedido_atual.pt;
+      }
+    }
+
+    // Inicialização
+    document.addEventListener('DOMContentLoaded', () => {
+      switchLanguage(currentLang);
+
+      // Mobile Menu
+      const hamburger = document.getElementById('hamburger-btn');
+      const navLinks = document.getElementById('nav-links');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+        });
+      }
+
+      // Theme Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('bv_theme', nextTheme);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

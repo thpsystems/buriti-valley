@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Governança &amp; Sobre | Buriti Valley — Startups de Roraima</title>
+  <meta name="description" content="Conheça a história da Buriti Valley, pioneira desde 2016 em Roraima, nossa atuação na governança do ELI Boa Vista e os critérios para entrar na vitrine oficial." />
+
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="../css/custom.css" />
+
+  <!-- Inicialização do Tema -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('bv_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Ambient Meshes -->
+  <div class="mesh-bg"></div>
+  <div class="mesh-bg-accent"></div>
+  <div class="dot-grid"></div>
+
+  <div class="app-container">
+    <!-- Navbar Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="../" class="brand">
+          <div class="brand-icon">BV</div>
+          <div class="brand-info">
+            <span class="logo-text">BURITI <span>VALLEY</span></span>
+            <span class="logo-subtext" data-i18n="nav_subtext">Comunidade de Startups de Roraima</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" id="nav-links">
+          <a href="../" class="nav-link" data-i18n="nav_home">Vitrine</a>
+          <a href="./" class="nav-link active" data-i18n="nav_gov">Governança &amp; Sobre</a>
+          <a href="../conectar/?aba=startup" class="nav-link" data-i18n="nav_submit">Submeter Startup</a>
+          <a href="../conectar/?aba=investidor" class="nav-link" data-i18n="nav_investors">Investidores</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="lang-switcher">
+            <button class="lang-btn active" id="lang-pt" onclick="switchLanguage('pt')">PT</button>
+            <button class="lang-btn" id="lang-en" onclick="switchLanguage('en')">EN</button>
+          </div>
+
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dossier-container">
+      <!-- Hero Institucional -->
+      <section class="gov-hero">
+        <span class="pill-badge pill-badge-amber" data-i18n="gov_badge">Comunidade &amp; Governança</span>
+        <h1 data-i18n="gov_title">Pioneirismo, Governança &amp; Visão de Futuro</h1>
+        <p class="gov-subtitle" data-i18n="gov_subtitle">
+          Fundada em 2016, a Buriti Valley é o movimento cívico e empreendedor que articula os fundadores, cientistas e investidores de Roraima para projetar o potencial da Amazônia Setentrional para o cenário global.
+        </p>
+      </section>
+
+      <!-- Pilares de Atuação -->
+      <section class="gov-pillars-grid">
+        <div class="gov-pillar-card">
+          <div class="gov-pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h3 data-i18n="pillar_1_title">Vitrine para o Mundo</h3>
+          <p data-i18n="pillar_1_desc" style="color: var(--color-text-secondary); font-size: 0.95rem;">
+            Superar o isolamento geográfico através de uma vitrine digital padronizada, bilíngue e transparente que conecta fundadores roraimenses a fundos de venture capital e clientes globais.
+          </p>
+        </div>
+
+        <div class="gov-pillar-card">
+          <div class="gov-pillar-icon" style="color: var(--color-accent-amber); background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.3);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 data-i18n="pillar_2_title">Cultura &amp; Comunidade Ativa</h3>
+          <p data-i18n="pillar_2_desc" style="color: var(--color-text-secondary); font-size: 0.95rem;">
+            Encontros contínuos como o tradicional <em>Beeriti Valley</em>, maratonas de ideação, demoday e hackathons integrados ao Centro de Inovação da UFRR e Incubadora Koneka (IFRR).
+          </p>
+        </div>
+
+        <div class="gov-pillar-card">
+          <div class="gov-pillar-icon" style="color: var(--color-accent-cyan); background: rgba(6, 182, 212, 0.15); border-color: rgba(6, 182, 212, 0.3);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 data-i18n="pillar_3_title">Voz no Ecossistema Institucional</h3>
+          <p data-i18n="pillar_3_desc" style="color: var(--color-text-secondary); font-size: 0.95rem;">
+            Assento formal e representação ativa na governança do ELI Boa Vista ao lado de universidades, órgãos estaduais de fomento, Sistema S e federações empresariais.
+          </p>
+        </div>
+      </section>
+
+      <!-- Linha do Tempo & Revitalização -->
+      <section class="gov-timeline-section">
+        <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;" data-i18n="timeline_title">Trajetória Histórica &amp; Ciclo de Revitalização</h2>
+        <p style="color: var(--color-text-secondary);" data-i18n="timeline_subtitle">
+          Uma década de articulação e resiliência construindo o ecossistema inovador de Roraima.
+        </p>
+
+        <div class="gov-timeline-list">
+          <div class="gov-timeline-item">
+            <div class="timeline-year-badge">2014–15</div>
+            <div class="timeline-content">
+              <h4 data-i18n="time_1_title">Primeiras Sementes &amp; Mentorias de Tecnologia</h4>
+              <p data-i18n="time_1_desc">
+                Pioneiros da computação e desenvolvedores locais iniciam mentorias voluntárias e grupos de estudo em Boa Vista para validar as primeiras teses de produtos digitais no estado.
+              </p>
+            </div>
+          </div>
+
+          <div class="gov-timeline-item">
+            <div class="timeline-year-badge">2016</div>
+            <div class="timeline-content">
+              <h4 data-i18n="time_2_title">Lançamento Público da Buriti Valley (19 de Maio)</h4>
+              <p data-i18n="time_2_desc">
+                Oficialização do manifesto da comunidade, inspirada na palmeira do Buriti — símbolo de resistência e fertilidade hídrica das veredas do Lavrado —, consolidando o primeiro ecossistema formal de startups em Roraima.
+              </p>
+            </div>
+          </div>
+
+          <div class="gov-timeline-item">
+            <div class="timeline-year-badge">2020–24</div>
+            <div class="timeline-content">
+              <h4 data-i18n="time_3_title">Maturidade &amp; Primeiros Editais de Fomento</h4>
+              <p data-i18n="time_3_desc">
+                Surgimento de cases de escala nacional (como a Pigz) e consolidação de editais estaduais estruturantes em parceria com Faperr, Finep (Programa Centelha RR I e II) e Sebrae.
+              </p>
+            </div>
+          </div>
+
+          <div class="gov-timeline-item">
+            <div class="timeline-year-badge" style="background: rgba(16, 185, 129, 0.2); color: var(--color-text-emerald); border-color: var(--color-accent-emerald);">2025–26</div>
+            <div class="timeline-content">
+              <h4 data-i18n="time_4_title">Ciclo de Revitalização &amp; Governança ELI Boa Vista</h4>
+              <p data-i18n="time_4_desc">
+                Retomada presencial de peso com meetups <em>Beeriti Valley</em>, realização do <em>StartupON Roraima</em> e integração formal na Governança do Ecossistema Local de Inovação (ELI) de Boa Vista, unindo 11 instituições fundamentais para articular o censo oficial de 126 startups no estado.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- As 11 Instituições do ELI Boa Vista -->
+      <section class="gov-timeline-section" style="background: rgba(0, 0, 0, 0.25);">
+        <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem;" data-i18n="eli_title">As 11 Instituições da Governança ELI Boa Vista</h2>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;" data-i18n="eli_desc">
+          A Buriti Valley atua em articulação direta com a coalizão oficial que lidera o desenvolvimento científico, tecnológico e industrial de Roraima:
+        </p>
+
+        <div class="tag-cloud" style="gap: 0.75rem;">
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🏛️ <strong>Rorainova</strong> (Agência de Inovação de RR)</span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🎓 <strong>UFRR</strong> (Centro de Inovação da UFRR)</span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🔬 <strong>IFRR</strong> (Incubadora Koneka)</span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">💡 <strong>FAPERR</strong> (Fundação de Amparo à Pesquisa de RR)</span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🚀 <strong>Sebrae/RR</strong></span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🏭 <strong>FIER</strong> (Federação das Indústrias do Estado de RR)</span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">⚙️ <strong>SENAI/RR</strong></span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🌾 <strong>SEADI</strong> (Secretaria de Agricultura e Desenvolvimento)</span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">📑 <strong>JUCERR</strong> (Junta Comercial de Roraima)</span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🏦 <strong>Desenvolve RR</strong></span>
+          <span class="tag-cloud-item" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🤝 <strong>AME</strong> (Associação de Microempresas de RR)</span>
+        </div>
+      </section>
+
+      <!-- Critérios para Entrar na Vitrine -->
+      <section class="criteria-section">
+        <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;" data-i18n="criteria_title">Critérios para Inclusão na Vitrine Oficial</h2>
+        <p style="color: var(--color-text-secondary);" data-i18n="criteria_subtitle">
+          Para garantir a credibilidade perante investidores e parceiros institucionais, todas as startups listadas passam pela validação dos 4 critérios essenciais:
+        </p>
+
+        <div class="criteria-grid">
+          <div class="criteria-item">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="crit_1_title">1. Base Tecnológica &amp; Escala</span>
+            </h4>
+            <p data-i18n="crit_1_desc">
+              O produto ou serviço deve possuir componente claro de inovação (software, hardware, biotecnologia, agrotecnologia ou novos materiais) com potencial de crescimento repetível e escalável.
+            </p>
+          </div>
+
+          <div class="criteria-item">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="crit_2_title">2. Vínculo com Roraima</span>
+            </h4>
+            <p data-i18n="crit_2_desc">
+              A startup deve ter sido fundada em Roraima, possuir fundadores residentes no estado ou operar projeto com impacto econômico/socioambiental direto na Amazônia Setentrional.
+            </p>
+          </div>
+
+          <div class="criteria-item">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="crit_3_title">3. Estágio de Maturidade Mapeado</span>
+            </h4>
+            <p data-i18n="crit_3_desc">
+              Enquadramento auditável em um dos estágios de maturidade reconhecidos pelo Sebrae e ABStartups: Ideação estruturada, MVP em teste, Operação com clientes ou Tração.
+            </p>
+          </div>
+
+          <div class="criteria-item">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="crit_4_title">4. Transparência &amp; Governança</span>
+            </h4>
+            <p data-i18n="crit_4_desc">
+              Disponibilização de currículo dos fundadores, dados de contato atualizados e conformidade com as boas práticas e código de conduta da comunidade Buriti Valley.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="../conectar/?aba=startup" class="btn btn-primary" data-i18n="btn_submit_now">
+            Submeter Minha Startup à Vitrine
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Geral -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">BV</div>
+            <span class="logo-text">BURITI <span>VALLEY</span></span>
+          </div>
+          <p data-i18n="footer_desc">
+            A comunidade pioneira de startups e inovação de Roraima. Conectando o ecossistema do extremo norte do Brasil aos principais polos de investimento do planeta.
+          </p>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4 data-i18n="footer_col_platform">Plataforma</h4>
+            <ul>
+              <li><a href="../" data-i18n="nav_home">Vitrine de Startups</a></li>
+              <li><a href="./" data-i18n="nav_gov">Governança &amp; Sobre</a></li>
+              <li><a href="../conectar/?aba=startup" data-i18n="nav_submit">Submeter Minha Startup</a></li>
+              <li><a href="../conectar/?aba=investidor" data-i18n="nav_investors">Área de Investidores</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer_col_ecosystem">Ecossistema ELI RR</h4>
+            <ul>
+              <li><a href="https://rorainova.rr.gov.br" target="_blank" rel="noopener">Rorainova</a></li>
+              <li><a href="https://ufrr.br" target="_blank" rel="noopener">Centro de Inovação UFRR</a></li>
+              <li><a href="https://ifrr.edu.br" target="_blank" rel="noopener">Incubadora Koneka (IFRR)</a></li>
+              <li><a href="https://sebrae.com.br/roraima" target="_blank" rel="noopener">Sebrae Roraima</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Buriti Valley. Todos os direitos reservados. De Roraima para o Mundo.</span>
+        <span>Integrante da Governança ELI Boa Vista</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Script de Tradução e Interatividade da Governança -->
+  <script>
+    const govTranslations = {
+      pt: {
+        nav_subtext: "Comunidade de Startups de Roraima",
+        nav_home: "Vitrine",
+        nav_gov: "Governança & Sobre",
+        nav_submit: "Submeter Startup",
+        nav_investors: "Investidores",
+        gov_badge: "Comunidade & Governança",
+        gov_title: "Pioneirismo, Governança & Visão de Futuro",
+        gov_subtitle: "Fundada em 2016, a Buriti Valley é o movimento cívico e empreendedor que articula os fundadores, cientistas e investidores de Roraima para projetar o potencial da Amazônia Setentrional para o cenário global.",
+        pillar_1_title: "Vitrine para o Mundo",
+        pillar_1_desc: "Superar o isolamento geográfico através de uma vitrine digital padronizada, bilíngue e transparente que conecta fundadores roraimenses a fundos de venture capital e clientes globais.",
+        pillar_2_title: "Cultura & Comunidade Ativa",
+        pillar_2_desc: "Encontros contínuos como o tradicional Beeriti Valley, maratonas de ideação, demoday e hackathons integrados ao Centro de Inovação da UFRR e Incubadora Koneka (IFRR).",
+        pillar_3_title: "Voz no Ecossistema Institucional",
+        pillar_3_desc: "Assento formal e representação ativa na governança do ELI Boa Vista ao lado de universidades, órgãos estaduais de fomento, Sistema S e federações empresariais.",
+        timeline_title: "Trajetória Histórica & Ciclo de Revitalização",
+        timeline_subtitle: "Uma década de articulação e resiliência construindo o ecossistema inovador de Roraima.",
+        time_1_title: "Primeiras Sementes & Mentorias de Tecnologia",
+        time_1_desc: "Pioneiros da computação e desenvolvedores locais iniciam mentorias voluntárias e grupos de estudo em Boa Vista para validar as primeiras teses de produtos digitais no estado.",
+        time_2_title: "Lançamento Público da Buriti Valley (19 de Maio)",
+        time_2_desc: "Oficialização do manifesto da comunidade, inspirada na palmeira do Buriti — símbolo de resistência e fertilidade hídrica das veredas do Lavrado —, consolidando o primeiro ecossistema formal de startups em Roraima.",
+        time_3_title: "Maturidade & Primeiros Editais de Fomento",
+        time_3_desc: "Surgimento de cases de escala nacional (como a Pigz) e consolidação de editais estaduais estruturantes em parceria com Faperr, Finep (Programa Centelha RR I e II) e Sebrae.",
+        time_4_title: "Ciclo de Revitalização & Governança ELI Boa Vista",
+        time_4_desc: "Retomada presencial de peso com meetups Beeriti Valley, realização do StartupON Roraima e integração formal na Governança do Ecossistema Local de Inovação (ELI) de Boa Vista, unindo 11 instituições fundamentais para articular o censo oficial de 126 startups no estado.",
+        eli_title: "As 11 Instituições da Governança ELI Boa Vista",
+        eli_desc: "A Buriti Valley atua em articulação direta com a coalizão oficial que lidera o desenvolvimento científico, tecnológico e industrial de Roraima:",
+        criteria_title: "Critérios para Inclusão na Vitrine Oficial",
+        criteria_subtitle: "Para garantir a credibilidade perante investidores e parceiros institucionais, todas as startups listadas passam pela validação dos 4 critérios essenciais:",
+        crit_1_title: "1. Base Tecnológica & Escala",
+        crit_1_desc: "O produto ou serviço deve possuir componente claro de inovação (software, hardware, biotecnologia, agrotecnologia ou novos materiais) com potencial de crescimento repetível e escalável.",
+        crit_2_title: "2. Vínculo com Roraima",
+        crit_2_desc: "A startup deve ter sido fundada em Roraima, possuir fundadores residentes no estado ou operar projeto com impacto econômico/socioambiental direto na Amazônia Setentrional.",
+        crit_3_title: "3. Estágio de Maturidade Mapeado",
+        crit_3_desc: "Enquadramento auditável em um dos estágios de maturidade reconhecidos pelo Sebrae e ABStartups: Ideação estruturada, MVP em teste, Operação com clientes ou Tração.",
+        crit_4_title: "4. Transparência & Governança",
+        crit_4_desc: "Disponibilização de currículo dos fundadores, dados de contato atualizados e conformidade com as boas práticas e código de conduta da comunidade Buriti Valley.",
+        btn_submit_now: "Submeter Minha Startup à Vitrine",
+        footer_desc: "A comunidade pioneira de startups e inovação de Roraima. Conectando o ecossistema do extremo norte do Brasil aos principais polos de investimento do planeta.",
+        footer_col_platform: "Plataforma",
+        footer_col_ecosystem: "Ecossistema ELI RR"
+      },
+      en: {
+        nav_subtext: "Roraima Startup & Innovation Community",
+        nav_home: "Showcase",
+        nav_gov: "Governance & About",
+        nav_submit: "Submit Startup",
+        nav_investors: "Investors",
+        gov_badge: "Community & Governance",
+        gov_title: "Pioneering Spirit, Governance & Long-Term Vision",
+        gov_subtitle: "Founded in 2016, Buriti Valley is the civic and entrepreneurial coalition uniting founders, scientists, and investors from Roraima to project Northern Amazonia's ingenuity to the world.",
+        pillar_1_title: "Global Showcase",
+        pillar_1_desc: "Bridging geographic distance through a standardized, bilingual, and transparent digital showcase connecting Roraima founders directly to venture capital funds and enterprise clients.",
+        pillar_2_title: "Vibrant Culture & Community",
+        pillar_2_desc: "Ongoing meetups such as Beeriti Valley, ideathons, demo days, and hackathons co-hosted with UFRR Innovation Center and Koneka Incubator (IFRR).",
+        pillar_3_title: "Institutional Policy Voice",
+        pillar_3_desc: "Formal voting seat and active representation within the ELI Boa Vista Innovation Governance alongside universities, state grant agencies, and business federations.",
+        timeline_title: "Historical Trajectory & Revitalization Cycle",
+        timeline_subtitle: "Over a decade of grassroot resilience building Roraima's tech and innovation cluster.",
+        time_1_title: "Initial Seeds & Tech Mentorship",
+        time_1_desc: "Local software engineers and computer science alumni launch voluntary mentorships in Boa Vista to prototype the state's earliest digital ventures.",
+        time_2_title: "Public Launch of Buriti Valley (May 19, 2016)",
+        time_2_desc: "Official proclamation of the community manifesto, named after the resilient Buriti palm—symbol of life and fertility across the Lavrado savannah—establishing Roraima's first startup collective.",
+        time_3_title: "Scale Cases & State Grant Pipelines",
+        time_3_desc: "Breakout of nationwide scale successes (e.g. Pigz) and establishment of multi-million grant programs in partnership with Faperr, Finep (Centelha RR), and Sebrae.",
+        time_4_title: "Revitalization & ELI Boa Vista Governance",
+        time_4_desc: "Strong in-person comeback with Beeriti Valley meetups, StartupON Roraima, and formal incorporation into ELI Boa Vista Governance alongside 11 key institutions backing the 126 mapped startups.",
+        eli_title: "The 11 Institutions of ELI Boa Vista Governance",
+        eli_desc: "Buriti Valley works in direct concert with the official multi-stakeholder alliance driving science, technology, and economic growth in Roraima:",
+        criteria_title: "Eligibility Criteria for Official Showcase Listing",
+        criteria_subtitle: "To maintain top-tier trust with investors and regional institutions, every listed venture is evaluated against four pillars:",
+        crit_1_title: "1. Technological Foundation & Scale",
+        crit_1_desc: "The solution must feature proprietary or defensible tech innovation (software, hardware, biotech, agritech, or novel materials) built for scalable market growth.",
+        crit_2_title: "2. Tangible Roraima Footprint",
+        crit_2_desc: "The startup must be founded in Roraima, led by resident founders, or execute operations generating direct economic or socio-environmental impact in the Northern Amazon.",
+        crit_3_title: "3. Verifiable Maturity Stage",
+        crit_3_desc: "Clear classification under one of the audited maturity tiers (Structured Ideation, Validated MVP, Revenue Operation, or Scale/Traction).",
+        crit_4_title: "4. Transparency & Founder Profiles",
+        crit_4_desc: "Full disclosure of founding team credentials, verifiable social profiles, and adherence to Buriti Valley's community integrity code.",
+        btn_submit_now: "Submit My Startup to Showcase",
+        footer_desc: "The pioneering startup and innovation community of Roraima. Connecting Brazil's Northern Amazon hub to global venture capital ecosystems.",
+        footer_col_platform: "Platform",
+        footer_col_ecosystem: "ELI RR Ecosystem"
+      }
+    };
+
+    let currentLang = localStorage.getItem('bv_lang') || 'pt';
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('bv_lang', lang);
+      document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+
+      document.getElementById('lang-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (govTranslations[lang] && govTranslations[lang][key]) {
+          el.innerHTML = govTranslations[lang][key];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      switchLanguage(currentLang);
+
+      const hamburger = document.getElementById('hamburger-btn');
+      const navLinks = document.getElementById('nav-links');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+        });
+      }
+
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('bv_theme', nextTheme);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conectar &amp; Matchmaking | Buriti Valley — Startups de Roraima</title>
+  <meta name="description" content="Canal oficial de entrada e matchmaking da Buriti Valley: cadastre sua startup na vitrine ou conecte-se como investidor e aceleradora aos fundadores de Roraima." />
+
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="../css/custom.css" />
+
+  <!-- Inicialização do Tema -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('bv_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Ambient Meshes -->
+  <div class="mesh-bg"></div>
+  <div class="mesh-bg-accent"></div>
+  <div class="dot-grid"></div>
+
+  <div class="app-container">
+    <!-- Navbar Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="../" class="brand">
+          <div class="brand-icon">BV</div>
+          <div class="brand-info">
+            <span class="logo-text">BURITI <span>VALLEY</span></span>
+            <span class="logo-subtext" data-i18n="nav_subtext">Comunidade de Startups de Roraima</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" id="nav-links">
+          <a href="../" class="nav-link" data-i18n="nav_home">Vitrine</a>
+          <a href="../governanca/" class="nav-link" data-i18n="nav_gov">Governança &amp; Sobre</a>
+          <a href="./?aba=startup" class="nav-link" id="nav-link-startup" data-i18n="nav_submit">Submeter Startup</a>
+          <a href="./?aba=investidor" class="nav-link" id="nav-link-investor" data-i18n="nav_investors">Investidores</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="lang-switcher">
+            <button class="lang-btn active" id="lang-pt" onclick="switchLanguage('pt')">PT</button>
+            <button class="lang-btn" id="lang-en" onclick="switchLanguage('en')">EN</button>
+          </div>
+
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="connect-container">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span class="pill-badge pill-badge-amber" data-i18n="conectar_pill">Canal de Matchmaking &amp; Entrada</span>
+        <h1 style="font-size: 2.6rem; margin: 0.75rem 0;" data-i18n="conectar_title">Conectar ao Ecossistema</h1>
+        <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto;" data-i18n="conectar_subtitle">
+          Seja para submeter sua startup à vitrine global ou para originar investimentos no extremo norte do Brasil, este é o canal oficial de contato com o comitê.
+        </p>
+      </div>
+
+      <!-- Abas Interativas -->
+      <div class="connect-tabs">
+        <button class="connect-tab-btn active" id="tab-startup-btn" onclick="setTab('startup')" data-i18n="tab_startup">
+          🚀 Cadastrar Startup
+        </button>
+        <button class="connect-tab-btn" id="tab-investor-btn" onclick="setTab('investor')" data-i18n="tab_investor">
+          💼 Sou Investidor / Aceleradora
+        </button>
+      </div>
+
+      <!-- Painel de Formulário: Cadastrar Startup -->
+      <section class="connect-form-panel" id="panel-startup">
+        <h2 style="font-size: 1.4rem; margin-bottom: 0.5rem;" data-i18n="form_startup_head">Submissão de Startup à Vitrine</h2>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 2rem;" data-i18n="form_startup_sub">
+          Preencha os dados da sua empresa. Após triagem do comitê de governança, criaremos a sua página dedicada de dossiê na plataforma.
+        </p>
+
+        <form id="startup-form" onsubmit="handleStartupSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_startup_name">Nome da Startup *</label>
+              <input type="text" class="form-input" id="st-name" required placeholder="Ex: BioLavrado Tech" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_startup_vertical">Vertical Principal *</label>
+              <select class="form-select" id="st-vertical" required>
+                <option value="Bioeconomia">Bioeconomia &amp; Floresta</option>
+                <option value="Agrotech">Agrotech &amp; Agricultura de Precisão</option>
+                <option value="GovTech">GovTech &amp; Cidades Inteligentes</option>
+                <option value="SaaS/B2B">SaaS / B2B Enterprise</option>
+                <option value="Saúde">Saúde &amp; Biotecnologia</option>
+                <option value="Logística">Logística &amp; Fronteiras</option>
+                <option value="Outra">Outra Vertical</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_startup_stage">Estágio Atual *</label>
+              <select class="form-select" id="st-stage" required>
+                <option value="Ideação">Ideação (Pesquisa &amp; Validação de Problema)</option>
+                <option value="MVP">MVP (Protótipo Funcional em Testes)</option>
+                <option value="Operação">Operação (Primeiros Clientes &amp; Receita)</option>
+                <option value="Tração">Tração / Escala (Crescimento Acelerado)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_startup_model">Modelo de Negócio *</label>
+              <select class="form-select" id="st-model" required>
+                <option value="B2B">B2B</option>
+                <option value="B2C">B2C</option>
+                <option value="B2G">B2G (Setor Público)</option>
+                <option value="B2B2C">B2B2C / Marketplace</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="lbl_startup_tagline">One-liner (Resumo em 1 frase do que a startup faz) *</label>
+            <input type="text" class="form-input" id="st-tagline" required placeholder="Ex: Desenvolvemos sensores IoT para microclima nas lavouras do cerrado roraimense." />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="lbl_startup_seeking">O que buscam agora no ecossistema? *</label>
+            <input type="text" class="form-input" id="st-seeking" required placeholder="Ex: Captação Pre-Seed de R$ 300k e conexão com aceleradora de bioeconomia." />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_founder_name">Fundador(a) Principal &amp; Cargo *</label>
+              <input type="text" class="form-input" id="st-founder" required placeholder="Ex: Ana Silva (CEO &amp; Co-founder)" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_founder_academic">Formação Acadêmica do Fundador *</label>
+              <input type="text" class="form-input" id="st-academic" required placeholder="Ex: Ciência da Computação — UFRR" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_contact_email">E-mail de Contato *</label>
+              <input type="email" class="form-input" id="st-email" required placeholder="contato@suastartup.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_startup_link">Website, Pitch Deck ou LinkedIn</label>
+              <input type="url" class="form-input" id="st-link" placeholder="https://..." />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;" data-i18n="btn_submit_startup">
+            Enviar Cadastro para Validação
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </form>
+      </section>
+
+      <!-- Painel de Formulário: Sou Investidor / Aceleradora -->
+      <section class="connect-form-panel" id="panel-investor" style="display: none;">
+        <h2 style="font-size: 1.4rem; margin-bottom: 0.5rem;" data-i18n="form_investor_head">Acesso ao Deal Flow &amp; Matchmaking</h2>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 2rem;" data-i18n="form_investor_sub">
+          Conecte-se às startups roraimenses. Organizamos apresentações bilaterais confidenciais e facilitamos seu contato direto com os fundadores.
+        </p>
+
+        <form id="investor-form" onsubmit="handleInvestorSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_investor_org">Nome do Fundo / Entidade / Aceleradora *</label>
+              <input type="text" class="form-input" id="inv-org" required placeholder="Ex: Amazônia Ventures" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_investor_name">Seu Nome &amp; Cargo *</label>
+              <input type="text" class="form-input" id="inv-name" required placeholder="Ex: Roberto Mendes (Managing Partner)" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_investor_type">Perfil de Atuação *</label>
+              <select class="form-select" id="inv-type" required>
+                <option value="Fundo VC">Fundo de Venture Capital (Seed / Série A)</option>
+                <option value="Investidor Anjo">Investidor Anjo / Syndicates</option>
+                <option value="Aceleradora">Aceleradora de Startups</option>
+                <option value="CVC">Corporate Venture Capital / Indústria</option>
+                <option value="Parceiro Comercial">Parceiro Estratégico / Distribuidor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_investor_interest">Vertical de Maior Interesse</label>
+              <select class="form-select" id="inv-vertical">
+                <option value="Todas">Todas as Verticais</option>
+                <option value="Bioeconomia">Bioeconomia &amp; Alimentos Amazônicos</option>
+                <option value="Agrotech">Agrotech de Precisão</option>
+                <option value="GovTech">GovTech &amp; Setor Público</option>
+                <option value="SaaS/B2B">SaaS &amp; Logística</option>
+                <option value="Saúde">Saúde &amp; Biotecnologia</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="lbl_target_startup">Startup de Interesse Específico (opcional)</label>
+            <input type="text" class="form-input" id="inv-target-startup" placeholder="Ex: Pigz, Agranus, RoraiFrut..." />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="lbl_investor_notes">Tese de Investimento ou Proposta de Parceria</label>
+            <textarea class="form-textarea" id="inv-notes" placeholder="Descreva brevemente o estágio preferido, faixa de ticket ou programa de aceleração..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_contact_email">E-mail Corporativo *</label>
+              <input type="email" class="form-input" id="inv-email" required placeholder="investimentos@fundo.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="lbl_contact_phone">Telefone / WhatsApp (opcional)</label>
+              <input type="tel" class="form-input" id="inv-phone" placeholder="+55 (11) 99999-9999" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-outline-amber" style="width: 100%; margin-top: 1rem;" data-i18n="btn_submit_investor">
+            Solicitar Apresentação Executiva &amp; Deal Flow
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Modal de Feedback de Sucesso -->
+    <div class="modal-overlay" id="success-modal">
+      <div class="modal-box">
+        <div class="modal-icon">✓</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;" id="modal-title">Solicitação Registrada com Sucesso!</h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem; line-height: 1.6;" id="modal-desc">
+          Seu cadastro foi recebido pelo comitê de governança da Buriti Valley. Um protocolo de atendimento foi emitido e salvo localmente.
+        </p>
+        <div style="background: rgba(16, 185, 129, 0.1); border: 1px dashed var(--color-accent-emerald); border-radius: 8px; padding: 0.75rem; margin-bottom: 1.5rem; font-family: monospace; color: var(--color-text-emerald);" id="modal-protocol">
+          PROTOCOLO: BV-2026-9841
+        </div>
+        <button class="btn btn-primary" onclick="closeModal()">Continuar Explorando</button>
+      </div>
+    </div>
+
+    <!-- Footer Geral -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">BV</div>
+            <span class="logo-text">BURITI <span>VALLEY</span></span>
+          </div>
+          <p data-i18n="footer_desc">
+            A comunidade pioneira de startups e inovação de Roraima. Conectando o ecossistema do extremo norte do Brasil aos principais polos de investimento do planeta.
+          </p>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4 data-i18n="footer_col_platform">Plataforma</h4>
+            <ul>
+              <li><a href="../" data-i18n="nav_home">Vitrine de Startups</a></li>
+              <li><a href="../governanca/" data-i18n="nav_gov">Governança &amp; Sobre</a></li>
+              <li><a href="./?aba=startup" data-i18n="nav_submit">Submeter Minha Startup</a></li>
+              <li><a href="./?aba=investidor" data-i18n="nav_investors">Área de Investidores</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer_col_ecosystem">Ecossistema ELI RR</h4>
+            <ul>
+              <li><a href="https://rorainova.rr.gov.br" target="_blank" rel="noopener">Rorainova</a></li>
+              <li><a href="https://ufrr.br" target="_blank" rel="noopener">Centro de Inovação UFRR</a></li>
+              <li><a href="https://ifrr.edu.br" target="_blank" rel="noopener">Incubadora Koneka (IFRR)</a></li>
+              <li><a href="https://sebrae.com.br/roraima" target="_blank" rel="noopener">Sebrae Roraima</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Buriti Valley. Todos os direitos reservados. De Roraima para o Mundo.</span>
+        <span>Canal Oficial de Matchmaking</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const connectTranslations = {
+      pt: {
+        nav_subtext: "Comunidade de Startups de Roraima",
+        nav_home: "Vitrine",
+        nav_gov: "Governança & Sobre",
+        nav_submit: "Submeter Startup",
+        nav_investors: "Investidores",
+        conectar_pill: "Canal de Matchmaking & Entrada",
+        conectar_title: "Conectar ao Ecossistema",
+        conectar_subtitle: "Seja para submeter sua startup à vitrine global ou para originar investimentos no extremo norte do Brasil, este é o canal oficial de contato com o comitê.",
+        tab_startup: "🚀 Cadastrar Startup",
+        tab_investor: "💼 Sou Investidor / Aceleradora",
+        form_startup_head: "Submissão de Startup à Vitrine",
+        form_startup_sub: "Preencha os dados da sua empresa. Após triagem do comitê de governança, criaremos a sua página dedicada de dossiê na plataforma.",
+        lbl_startup_name: "Nome da Startup *",
+        lbl_startup_vertical: "Vertical Principal *",
+        lbl_startup_stage: "Estágio Atual *",
+        lbl_startup_model: "Modelo de Negócio *",
+        lbl_startup_tagline: "One-liner (Resumo em 1 frase do que a startup faz) *",
+        lbl_startup_seeking: "O que buscam agora no ecossistema? *",
+        lbl_founder_name: "Fundador(a) Principal & Cargo *",
+        lbl_founder_academic: "Formação Acadêmica do Fundador *",
+        lbl_contact_email: "E-mail de Contato *",
+        lbl_startup_link: "Website, Pitch Deck ou LinkedIn",
+        btn_submit_startup: "Enviar Cadastro para Validação",
+        form_investor_head: "Acesso ao Deal Flow & Matchmaking",
+        form_investor_sub: "Conecte-se às startups roraimenses. Organizamos apresentações bilaterais confidenciais e facilitamos seu contato direto com os fundadores.",
+        lbl_investor_org: "Nome do Fundo / Entidade / Aceleradora *",
+        lbl_investor_name: "Seu Nome & Cargo *",
+        lbl_investor_type: "Perfil de Atuação *",
+        lbl_investor_interest: "Vertical de Maior Interesse",
+        lbl_target_startup: "Startup de Interesse Específico (opcional)",
+        lbl_investor_notes: "Tese de Investimento ou Proposta de Parceria",
+        lbl_contact_phone: "Telefone / WhatsApp (opcional)",
+        btn_submit_investor: "Solicitar Apresentação Executiva & Deal Flow",
+        footer_desc: "A comunidade pioneira de startups e inovação de Roraima. Conectando o ecossistema do extremo norte do Brasil aos principais polos de investimento do planeta.",
+        footer_col_platform: "Plataforma",
+        footer_col_ecosystem: "Ecossistema ELI RR"
+      },
+      en: {
+        nav_subtext: "Roraima Startup & Innovation Community",
+        nav_home: "Showcase",
+        nav_gov: "Governance & About",
+        nav_submit: "Submit Startup",
+        nav_investors: "Investors",
+        conectar_pill: "Matchmaking & Inbound Gateway",
+        conectar_title: "Connect to the Ecosystem",
+        conectar_subtitle: "Whether you wish to showcase your venture globally or source proprietary deal flow from Northern Brazil, this is the official governance contact channel.",
+        tab_startup: "🚀 Register Startup",
+        tab_investor: "💼 I Am an Investor / Accelerator",
+        form_startup_head: "Startup Showcase Submission",
+        form_startup_sub: "Submit your startup telemetry. Following review by our governance committee, we will publish your official dossier page on the showcase.",
+        lbl_startup_name: "Startup Name *",
+        lbl_startup_vertical: "Primary Vertical *",
+        lbl_startup_stage: "Current Maturity Stage *",
+        lbl_startup_model: "Business Model *",
+        lbl_startup_tagline: "One-liner (Summary sentence of what your venture does) *",
+        lbl_startup_seeking: "What are you seeking right now in the ecosystem? *",
+        lbl_founder_name: "Lead Founder & Title *",
+        lbl_founder_academic: "Founder's Academic Background *",
+        lbl_contact_email: "Corporate Contact Email *",
+        lbl_startup_link: "Website, Pitch Deck or LinkedIn URL",
+        btn_submit_startup: "Submit Application for Review",
+        form_investor_head: "Deal Flow Access & Matchmaking",
+        form_investor_sub: "Connect with Roraima's top ventures. We orchestrate confidential bilateral introductions and direct founder meetings.",
+        lbl_investor_org: "Firm / Fund / Accelerator Name *",
+        lbl_investor_name: "Your Name & Title *",
+        lbl_investor_type: "Investor Profile *",
+        lbl_investor_interest: "Vertical of Primary Interest",
+        lbl_target_startup: "Target Startup of Specific Interest (optional)",
+        lbl_investor_notes: "Investment Thesis / Partnership Scope",
+        lbl_contact_phone: "Phone / WhatsApp (optional)",
+        btn_submit_investor: "Request Executive Introduction & Deal Flow",
+        footer_desc: "The pioneering startup and innovation community of Roraima. Connecting Brazil's Northern Amazon hub to global venture capital ecosystems.",
+        footer_col_platform: "Platform",
+        footer_col_ecosystem: "ELI RR Ecosystem"
+      }
+    };
+
+    let currentLang = localStorage.getItem('bv_lang') || 'pt';
+
+    function setTab(tab) {
+      const isStartup = (tab === 'startup');
+      document.getElementById('panel-startup').style.display = isStartup ? 'block' : 'none';
+      document.getElementById('panel-investor').style.display = isStartup ? 'none' : 'block';
+
+      document.getElementById('tab-startup-btn').classList.toggle('active', isStartup);
+      document.getElementById('tab-investor-btn').classList.toggle('active', !isStartup);
+
+      // Atualiza URL sem recarregar
+      const url = new URL(window.location);
+      url.searchParams.set('aba', tab);
+      window.history.replaceState({}, '', url);
+    }
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('bv_lang', lang);
+      document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+
+      document.getElementById('lang-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (connectTranslations[lang] && connectTranslations[lang][key]) {
+          el.innerHTML = connectTranslations[lang][key];
+        }
+      });
+    }
+
+    function handleStartupSubmit(e) {
+      e.preventDefault();
+      const payload = {
+        tipo: 'startup',
+        nome: document.getElementById('st-name').value,
+        vertical: document.getElementById('st-vertical').value,
+        estagio: document.getElementById('st-stage').value,
+        modelo: document.getElementById('st-model').value,
+        tagline: document.getElementById('st-tagline').value,
+        seeking: document.getElementById('st-seeking').value,
+        founder: document.getElementById('st-founder').value,
+        academic: document.getElementById('st-academic').value,
+        email: document.getElementById('st-email').value,
+        link: document.getElementById('st-link').value,
+        timestamp: new Date().toISOString()
+      };
+
+      saveAndShowFeedback(payload, 'Cadastro de Startup Recebido!');
+    }
+
+    function handleInvestorSubmit(e) {
+      e.preventDefault();
+      const payload = {
+        tipo: 'investidor',
+        organizacao: document.getElementById('inv-org').value,
+        nome: document.getElementById('inv-name').value,
+        perfil: document.getElementById('inv-type').value,
+        vertical: document.getElementById('inv-vertical').value,
+        targetStartup: document.getElementById('inv-target-startup').value,
+        notas: document.getElementById('inv-notes').value,
+        email: document.getElementById('inv-email').value,
+        telefone: document.getElementById('inv-phone').value,
+        timestamp: new Date().toISOString()
+      };
+
+      saveAndShowFeedback(payload, 'Solicitação de Conexão Registrada!');
+    }
+
+    function saveAndShowFeedback(payload, title) {
+      const submissions = JSON.parse(localStorage.getItem('bv_submissions') || '[]');
+      submissions.push(payload);
+      localStorage.setItem('bv_submissions', JSON.stringify(submissions));
+
+      const protocolNum = 'BV-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-protocol').textContent = 'PROTOCOLO: ' + protocolNum;
+      document.getElementById('success-modal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('success-modal').classList.remove('active');
+      window.location.href = '../';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      switchLanguage(currentLang);
+
+      // Tratamento de parâmetros de URL (?aba=investidor&startup=pigz)
+      const urlParams = new URLSearchParams(window.location.search);
+      const tabParam = urlParams.get('aba');
+      const startupParam = urlParams.get('startup');
+
+      if (tabParam === 'investidor') {
+        setTab('investor');
+      } else {
+        setTab('startup');
+      }
+
+      if (startupParam) {
+        const targetInput = document.getElementById('inv-target-startup');
+        if (targetInput) {
+          targetInput.value = startupParam.toUpperCase();
+        }
+      }
+
+      // Mobile Menu
+      const hamburger = document.getElementById('hamburger-btn');
+      const navLinks = document.getElementById('nav-links');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+        });
+      }
+
+      // Theme Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('bv_theme', nextTheme);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+[
+  {
+    "slug": "pigz",
+    "nome": "Pigz",
+    "logo_iniciais": "PZ",
+    "vertical": "SaaS/B2B",
+    "estagio": "Tração",
+    "modelo_negocio": "B2B / Marketplace",
+    "buscando": ["Investimento", "Parcerias"],
+    "tagline": {
+      "pt": "Ecossistema completo de gestão, fidelidade e delivery sem taxas abusivas para o mercado de food service.",
+      "en": "All-in-one management, loyalty, and fair-rate delivery ecosystem for the food service industry."
+    },
+    "problema": {
+      "pt": "Altas taxas de comissão (de até 27%) cobradas por grandes marketplaces de delivery sufocam bares e restaurantes, além da fragmentação de softwares de caixa, estoque e fidelização de clientes.",
+      "en": "High commission rates (up to 27%) charged by dominant delivery marketplaces suffocate bars and restaurants, combined with fragmented POS, inventory, and customer retention systems."
+    },
+    "solucao": {
+      "pt": "Plataforma integrada que combina PDV em nuvem, gestão de cardápio digital, controle fiscal, canais próprios de pedidos via WhatsApp/Web sem comissão por pedido e aplicativo de marketplace unificado.",
+      "en": "Integrated platform combining cloud POS, digital menu management, tax compliance, commission-free ordering channels via Web/WhatsApp, and a unified consumer marketplace app."
+    },
+    "diferencial": {
+      "pt": "Arquitetura distribuída resiliente, taxas transparentes sem surpresas para o comerciante, suporte humanizado local e interoperabilidade com os principais meios de pagamento e impressoras térmicas.",
+      "en": "Resilient distributed architecture, fully transparent merchant fees, dedicated local customer support, and seamless interoperability with leading payment gateways and thermal printers."
+    },
+    "metricas_destaque": {
+      "pt": "+30 Milhões de pedidos processados | Presente em todos os 27 estados do Brasil | +4.500 lojistas ativos",
+      "en": "+30 Million orders processed | Live across all 27 Brazilian states | +4,500 active merchant partners"
+    },
+    "pedido_atual": {
+      "pt": "Rodada de Captação Série A para acelerar a expansão das operações em capitais do Sudeste e novos módulos de antecipação de recebíveis.",
+      "en": "Series A investment round to accelerate commercial scale across Southeastern capitals and launch embedded fintech lending modules."
+    },
+    "premiacoes": [
+      {
+        "titulo": "Case Nacional de Escala Food Service (+30M pedidos)",
+        "ano": "2026"
+      },
+      {
+        "titulo": "Destaque de Tração Nacional do Ecossistema Roraimense",
+        "ano": "2025"
+      },
+      {
+        "titulo": "Reconhecimento Empreendedor Sebrae Roraima",
+        "ano": "2024"
+      }
+    ],
+    "links": {
+      "website": "https://pigz.com.br",
+      "linkedin": "https://www.linkedin.com/company/pigzapp",
+      "pitch_deck": "https://pigz.com.br/investidores"
+    },
+    "time": [
+      {
+        "nome": "Laercio Gentil",
+        "cargo": "CEO & Co-founder",
+        "formacao": "Administração & Estratégia de Negócios — Boa Vista/RR",
+        "experiencia": "Mais de 14 anos liderando operações de tecnologia, estratégia corporativa e expansão comercial em mercados de alto crescimento.",
+        "skills": ["Visão de Mercado", "Liderança Executiva", "Expansão Comercial", "Food Service"],
+        "linkedin": "https://www.linkedin.com/in/laerciogentil/",
+        "github": ""
+      },
+      {
+        "nome": "Leonardo Seefeld",
+        "cargo": "COO & Co-founder",
+        "formacao": "Engenharia de Software & Gestão de Operações",
+        "experiencia": "Especialista em escala de produto, processos operacionais distribuídos, logística de entrega de última milha e experiência do cliente.",
+        "skills": ["Operações de Escala", "Customer Experience", "Logística de Delivery", "Finanças"],
+        "linkedin": "https://www.linkedin.com/in/leonardoseefeld/",
+        "github": ""
+      },
+      {
+        "nome": "Head de Engenharia (Equipe Técnica)",
+        "cargo": "VP of Engineering & Architecture",
+        "formacao": "Ciência da Computação — UFRR",
+        "experiencia": "10 anos em microsserviços de alta disponibilidade, arquiteturas orientadas a eventos e processamento massivo de transações financeiras.",
+        "skills": ["Go", "Node.js", "Kubernetes", "Alta Concorrência", "Kafka"],
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      }
+    ]
+  },
+  {
+    "slug": "agranus",
+    "nome": "Agranus",
+    "logo_iniciais": "AG",
+    "vertical": "Agrotech",
+    "estagio": "Tração",
+    "modelo_negocio": "B2B",
+    "buscando": ["Investimento", "Aceleração"],
+    "tagline": {
+      "pt": "Tecnologia de precisão e mecanização sustentável para a colheita e pós-colheita de açaí nativo e de cultivo na Amazônia.",
+      "en": "Precision technology and sustainable mechanization for harvesting native and cultivated açaí across the Amazon."
+    },
+    "problema": {
+      "pt": "A colheita tradicional do açaí na Amazônia depende da escalada manual de palmeiras de até 20 metros, gerando alto risco de acidentes de trabalho, gargalo de produtividade e perda de até 35% dos frutos.",
+      "en": "Traditional açaí harvesting relies on manual climbing of 20-meter palm trees, causing severe occupational accidents, labor bottlenecks, and post-harvest losses up to 35%."
+    },
+    "solucao": {
+      "pt": "Equipamento eletromecânico e leve de vibração controlada acoplado a drones de monitoramento de maturação, permitindo colheita segura em solo, triplicando o rendimento por dia e preservando a integridade da planta.",
+      "en": "Lightweight electromechanical controlled-vibration harvesting device integrated with drone-based ripening inspection, enabling safe ground operation and tripling harvest yield."
+    },
+    "diferencial": {
+      "pt": "Patente de inovação mecânica ergonômica, bateria de alta densidade recarregável por energia solar de campo e integração IoT para rastreamento de geolocalização dos cachos colhidos.",
+      "en": "Proprietary ergonomic mechanical patent, solar-rechargeable high-density field battery, and IoT payload logging harvest coordinates for socio-environmental traceability."
+    },
+    "metricas_destaque": {
+      "pt": "Top 100 Prêmio Sebrae Startups 2025 | +12 cooperativas atendidas no Norte | Zero acidentes registrados nos testes de campo",
+      "en": "Top 100 Sebrae Startups Award 2025 | 12+ Northern cooperatives onboarded | Zero field accidents recorded during trials"
+    },
+    "pedido_atual": {
+      "pt": "Captação Seed de R$ 1,2 milhão para linha de montagem industrial em Boa Vista e fabricação de 150 unidades pré-encomendadas.",
+      "en": "Seed round of R$ 1.2M for setting up local assembly line in Boa Vista and fulfilling 150 pre-ordered units."
+    },
+    "premiacoes": [
+      {
+        "titulo": "Top 100 no Prêmio Sebrae Startups",
+        "ano": "2025"
+      },
+      {
+        "titulo": "Aprovada Programa Inova Amazônia — Módulo Tração",
+        "ano": "2024"
+      },
+      {
+        "titulo": "Menção Honrosa em Bioeconomia e Mecanização Agrícola",
+        "ano": "2023"
+      }
+    ],
+    "links": {
+      "website": "https://agranus.com.br",
+      "linkedin": "https://www.linkedin.com/company/agranus",
+      "pitch_deck": "https://agranus.com.br/deck"
+    },
+    "time": [
+      {
+        "nome": "Marcos Vinícius Silva",
+        "cargo": "CEO & Fundador",
+        "formacao": "Engenharia Agronômica — UFRR",
+        "experiencia": "Especialista em sistemas agroflorestais amazônicos e mecanização de pequenas e médias lavouras tropicais com 8 anos de atuação técnica.",
+        "skills": ["Sistemas Agroflorestais", "Gestão de Projetos Rurais", "Captação", "Desenvolvimento de Parcerias"],
+        "linkedin": "https://linkedin.com",
+        "github": ""
+      },
+      {
+        "nome": "Carlos Eduardo Barreto",
+        "cargo": "CTO & Co-founder",
+        "formacao": "Engenharia Mecatrônica & Robótica — IFRR / UnB",
+        "experiencia": "Engenheiro de hardware com foco em acionamentos eletromecânicos de baixo consumo energético e resistência a ambientes úmidos.",
+        "skills": ["SolidWorks", "Sistemas Embarcados", "Prototipagem Rápida", "Sensores IoT"],
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      }
+    ]
+  },
+  {
+    "slug": "roraifrut",
+    "nome": "RoraiFrut",
+    "logo_iniciais": "RF",
+    "vertical": "Bioeconomia",
+    "estagio": "Tração",
+    "modelo_negocio": "B2B / B2B2C",
+    "buscando": ["Investimento", "Parcerias"],
+    "tagline": {
+      "pt": "Agroindústria amazônica de polpas e superfrutos com rastreabilidade da floresta à mesa e impacto em +30 famílias extrativistas.",
+      "en": "Amazonian agroindustry for pulp and superfruits with forest-to-table traceability impacting 30+ riverine families."
+    },
+    "problema": {
+      "pt": "Comunidades ribeirinhas e extrativistas de Roraima sofrem com intermediários abusivos e falta de estrutura de congelamento rápido, enquanto indústrias nacionais buscam bioingredientes com procedência verificada e certificada.",
+      "en": "Traditional Amazonian riverine communities face predatory middlemen and lack flash-freezing facilities, while national brands struggle to source verified, certified bio-ingredients."
+    },
+    "solucao": {
+      "pt": "Mini-hubs modulares de pré-processamento fluvial com energia solar combinados a um sistema blockchain de rastreabilidade (QR Code no lote) que certifica remuneração justa e impacto florestal positivo.",
+      "en": "Solar-powered modular riverine pre-processing hubs combined with a lightweight blockchain traceability platform certifying fair trade wages and standing forest preservation."
+    },
+    "diferencial": {
+      "pt": "Cadeia de suprimentos direta com mais de 30 famílias cadastradas, tecnologia proprietária de liofilização solar que reduz peso logístico em 70% e zero adição de conservantes químicos.",
+      "en": "Direct supply chain partnering with 30+ forest families, proprietary solar freeze-drying minimizing logistical weight by 70%, and 100% clean-label ingredients."
+    },
+    "metricas_destaque": {
+      "pt": "Top 100 Prêmio Sebrae Startups 2026 | +30 famílias ribeirinhas parceiras | 42 toneladas de polpa rastreada no último ano safra",
+      "en": "Top 100 Sebrae Startups Award 2026 | 30+ riverine partner households | 42 tons of traceable fruit pulp harvested last season"
+    },
+    "pedido_atual": {
+      "pt": "Captação Pre-Seed de R$ 600k para ampliação da infraestrutura de armazenamento refrigerado no porto de Caracaraí e certificação orgânica internacional.",
+      "en": "Pre-Seed round of R$ 600k to expand cold storage infrastructure at Caracaraí river port and secure international USDA/EU Organic certification."
+    },
+    "premiacoes": [
+      {
+        "titulo": "Top 100 no Prêmio Sebrae Startups",
+        "ano": "2026"
+      },
+      {
+        "titulo": "Aprovada Edital Faperr de Apoio à Sociobiodiversidade",
+        "ano": "2025"
+      },
+      {
+        "titulo": "Prêmio Amazônia Sustentável e Inovadora",
+        "ano": "2024"
+      }
+    ],
+    "links": {
+      "website": "https://roraifrut.com.br",
+      "linkedin": "https://www.linkedin.com/company/roraifrut",
+      "pitch_deck": "https://roraifrut.com.br/deck"
+    },
+    "time": [
+      {
+        "nome": "Dra. Luciana Camargo",
+        "cargo": "CEO & Co-founder",
+        "formacao": "Doutorado em Ciência e Tecnologia de Alimentos — UFRR / INPA",
+        "experiencia": "Mais de 12 anos de pesquisa em propriedades nutracêuticas da flora amazônica (camu-camu, buriti, açaí do lavrado) e formulação de bioativos.",
+        "skills": ["Tecnologia de Alimentos", "Bioquímica", "Cadeias Produtivas", "ESG & Comunidades"],
+        "linkedin": "https://linkedin.com",
+        "github": ""
+      },
+      {
+        "nome": "Thiago Meireles",
+        "cargo": "Diretor de Operações e Cadeias",
+        "formacao": "Administração com ênfase em Logística — UFRR",
+        "experiencia": "Especialista em cadeias logísticas fluviais no estado de Roraima e articulação de cooperativas tradicionais nos municípios do interior.",
+        "skills": ["Logística Fluvial", "Relacionamento Comunitário", "Supply Chain", "Qualidade"],
+        "linkedin": "https://linkedin.com",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "slug": "lavrado-biotech",
+    "nome": "Lavrado Biotech",
+    "logo_iniciais": "LB",
+    "vertical": "Saúde",
+    "estagio": "MVP",
+    "modelo_negocio": "B2B",
+    "buscando": ["Aceleração", "Investimento"],
+    "tagline": {
+      "pt": "Bioprospecção de ativos medicinais do bioma Lavrado para dermocosméticos e fitoterápicos de alta performance.",
+      "en": "Bioprospecting medicinal assets from the Lavrado biome for high-performance dermocosmetics and therapeutics."
+    },
+    "problema": {
+      "pt": "A indústria farmacêutica e dermocosmética global demanda moléculas vegetais inovadoras com atividade antioxidante e anti-inflamatória comprovada, mas o bioma Lavrado (savana de Roraima) permanece cientificamente inexplorado comercialmente.",
+      "en": "The global pharma and skincare industry requires novel plant molecules with proven antioxidant and anti-inflammatory activity, yet the Lavrado biome remains largely untapped for commercial bioscience."
+    },
+    "solucao": {
+      "pt": "Plataforma de triagem biológica e extração verde por fluido supercrítico que isola metabólitos secundários de espécies endêmicas do Lavrado, gerando extratos padronizados prontos para validação clínica.",
+      "en": "Biological screening and supercritical green extraction platform isolating secondary metabolites from endemic Lavrado species, producing standardized extracts for clinical validation."
+    },
+    "diferencial": {
+      "pt": "Patente provisional de processo de extração verde depositada no INPI, matriz de bioensaio in vitro proprietária e associação com o ecossistema ConectaHealth.",
+      "en": "Provisional green extraction patent filed with INPI, proprietary in vitro bioassay matrix, and strategic integration with the ConectaHealth hub."
+    },
+    "metricas_destaque": {
+      "pt": "Aprovada Centelha II RR (R$ 60k subvenção) | 2 Depósitos de Patente INPI | Validação in vitro com 94% de inibição oxidativa",
+      "en": "Awarded Centelha II RR grant (R$ 60k) | 2 INPI patent filings | In-vitro validation showing 94% oxidative stress inhibition"
+    },
+    "pedido_atual": {
+      "pt": "Captação Pre-Seed de R$ 380k e parceria com aceleradora setorial de Biotecnologia para ensaios toxicológicos e registro na ANVISA.",
+      "en": "Pre-Seed round of R$ 380k and partnership with a dedicated Biotech accelerator for regulatory toxicology assays and ANVISA registration."
+    },
+    "premiacoes": [
+      {
+        "titulo": "Aprovada no Programa Centelha II Roraima (Faperr / Finep)",
+        "ano": "2024"
+      },
+      {
+        "titulo": "Selecionada no Hub ConectaHealth Amazônia",
+        "ano": "2025"
+      },
+      {
+        "titulo": "1º Lugar Pitch Universitário Centro de Inovação UFRR",
+        "ano": "2024"
+      }
+    ],
+    "links": {
+      "website": "https://lavradobiotech.com.br",
+      "linkedin": "https://www.linkedin.com/company/lavrado-biotech",
+      "pitch_deck": "https://lavradobiotech.com.br/deck"
+    },
+    "time": [
+      {
+        "nome": "Dra. Renata Vasconcelos",
+        "cargo": "Chief Scientific Officer (CSO)",
+        "formacao": "Doutorado em Bioquímica e Biologia Molecular — UFRR / Unicamp",
+        "experiencia": "Mais de 10 anos de pesquisa translacional em fitocompostos do cerrado e savana amazônica, com 14 artigos internacionais publicados.",
+        "skills": ["Biologia Molecular", "Bioquímica Analítica", "Propriedade Intelectual", "ANVISA"],
+        "linkedin": "https://linkedin.com",
+        "github": ""
+      },
+      {
+        "nome": "Guilherme Sampaio",
+        "cargo": "CEO & Head de Negócios",
+        "formacao": "Farmácia Industrial — UFRR | MBA em Gestão da Inovação — FGV",
+        "experiencia": "Ex-gerente de qualidade em indústria farmacêutica com experiência em parcerias B2B e contratos de transferência de tecnologia.",
+        "skills": ["Transferência de Tecnologia", "Regulatório Farmacêutico", "Vendas B2B", "Pitch de Investimento"],
+        "linkedin": "https://linkedin.com",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "slug": "macungov",
+    "nome": "MacunGov",
+    "logo_iniciais": "MG",
+    "vertical": "GovTech",
+    "estagio": "Operação",
+    "modelo_negocio": "B2G / B2B",
+    "buscando": ["Parcerias", "Aceleração"],
+    "tagline": {
+      "pt": "Plataforma de interoperabilidade e desburocratização tributária e territorial para municípios da Amazônia Setentrional.",
+      "en": "Interoperability and municipal tax/land registry modernization platform for the Northern Amazon region."
+    },
+    "problema": {
+      "pt": "Municípios do interior de Roraima e da região de fronteira enfrentam descontinuidade de dados cadastrais, arrecadação municipal defasada e semanas de lentidão para concessão de alvarás comerciais e certidões.",
+      "en": "Northern interior municipalities face fragmented cadastre databases, depressed local tax collection, and weeks of bureaucratic delay for business licensing and land permits."
+    },
+    "solucao": {
+      "pt": "SaaS B2G modular que conecta georreferenciamento urbano por satélite, emissão instantânea de alvarás digitais integrados à RedeSim e módulo de conciliação fiscal automática via Pix.",
+      "en": "Modular B2G SaaS connecting satellite urban cadastre, instant business license issuance integrated with national portals, and automated Pix tax clearing."
+    },
+    "diferencial": {
+      "pt": "Arquitetura offline-first otimizada para conexões de baixa largura de banda comuns na calha dos rios e zonas rurais, com compliance total com a LGPD e Lei de Governo Digital.",
+      "en": "Offline-first sync architecture optimized for low-bandwidth frontier networks, with full compliance to LGPD and the Brazilian Digital Government Framework."
+    },
+    "metricas_destaque": {
+      "pt": "Incubada na Koneka (IFRR) | 4 Municípios pilotos em Roraima | Redução de 18 para 2 dias na emissão de alvarás de baixo risco",
+      "en": "Incubated at Koneka (IFRR) | 4 Pilot municipalities in Roraima | Reduced low-risk business licensing from 18 to 2 days"
+    },
+    "pedido_atual": {
+      "pt": "Buscando parceiros institucionais para expansão do consórcio municipal interfronteira e aceleração em programa especializado em GovTech.",
+      "en": "Seeking institutional partners to expand cross-border municipal pilots and entry into specialized GovTech acceleration programs."
+    },
+    "premiacoes": [
+      {
+        "titulo": "Graduada no Programa de Incubação Koneka — IFRR",
+        "ano": "2025"
+      },
+      {
+        "titulo": "Finalista Prêmio Nacional de Inovação em Gestão Pública",
+        "ano": "2026"
+      },
+      {
+        "titulo": "Reconhecimento Cidades Inteligentes da Amazônia",
+        "ano": "2025"
+      }
+    ],
+    "links": {
+      "website": "https://macungov.com.br",
+      "linkedin": "https://www.linkedin.com/company/macungov",
+      "pitch_deck": "https://macungov.com.br/deck"
+    },
+    "time": [
+      {
+        "nome": "Fabrício Albuquerque",
+        "cargo": "CEO & Tech Lead",
+        "formacao": "Tecnologia em Análise e Desenvolvimento de Sistemas — IFRR",
+        "experiencia": "8 anos de desenvolvimento de software no setor público, especialista em integrações tributárias e interoperabilidade de dados abertos.",
+        "skills": ["Python", "FastAPI", "PostgreSQL/GIS", "Governo Digital", "Segurança da Informação"],
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      },
+      {
+        "nome": "Dra. Carolina Freitas",
+        "cargo": "Head de Relações Institucionais e Compliance",
+        "formacao": "Direito — UFRR | Especialização em Direito Tributário e Administrativo",
+        "experiencia": "Advogada com trajetória em consultoria jurídica municipal, convênios públicos e estruturação de editais de inovação e contratações GovTech.",
+        "skills": ["Direito Público", "Marco Legal das Startups", "LGPD", "Relações Governamentais"],
+        "linkedin": "https://linkedin.com",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "slug": "florasense-rr",
+    "nome": "FloraSense RR",
+    "logo_iniciais": "FS",
+    "vertical": "Agrotech",
+    "estagio": "Ideação",
+    "modelo_negocio": "B2B / SaaS",
+    "buscando": ["Investimento", "Aceleração"],
+    "tagline": {
+      "pt": "Rede de microestações IoT e sensoriamento microclimático preditivo para lavouras de grãos no bioma Lavrado.",
+      "en": "IoT micro-station mesh and predictive microclimate sensing for grain production across the Lavrado savannah."
+    },
+    "problema": {
+      "pt": "A rápida expansão do cultivo de soja e milho em Roraima sofre com alta variabilidade de chuvas e escassez de dados meteorológicos locais hiper-resolvidos, ocasionando perdas milionárias em sementes e defensivos.",
+      "en": "The rapid expansion of soybean and corn farming in Roraima faces severe rainfall volatility and a lack of hyper-local weather telemetry, causing heavy losses in seeding and spraying."
+    },
+    "solucao": {
+      "pt": "Estações meteorológicas solares de baixo custo que operam em malha LoRaWAN, conectadas a algoritmos de machine learning calibrados para o regime de ventos e radiação solar de Roraima.",
+      "en": "Low-cost, solar-powered weather telemetry stations running on a LoRaWAN mesh, feeding machine learning models calibrated for Roraima's solar and wind dynamics."
+    },
+    "diferencial": {
+      "pt": "Custo de implantação 75% menor que estações convencionais importadas, funcionamento 100% autônomo sem necessidade de 4G/5G celular na lavoura e aplicativo simples de alertas no WhatsApp.",
+      "en": "75% lower hardware CAPEX than imported stations, fully autonomous operation without cellular 4G/5G coverage, and direct instant alerts via WhatsApp."
+    },
+    "metricas_destaque": {
+      "pt": "Projeto Apoiado no Hub UERR | 1º Lugar Ideathon Centro de Inovação UFRR 2025 | 3 Fazendas de teste parceiras no Bonfim e Cantá",
+      "en": "Supported by UERR Hub | 1st Place Ideathon UFRR Innovation Center 2025 | 3 Partner trial farms in Bonfim and Cantá"
+    },
+    "pedido_atual": {
+      "pt": "Captação Pre-Seed de R$ 200k e mentoria em validação de produto para construção de 15 protótipos industriais e teste da rede LoRaWAN.",
+      "en": "Pre-Seed round of R$ 200k and agronomic product validation mentorship to manufacture 15 industrial field prototypes and validate LoRaWAN mesh."
+    },
+    "premiacoes": [
+      {
+        "titulo": "1º Lugar Ideathon de Agrotecnologia — Centro de Inovação UFRR",
+        "ano": "2025"
+      },
+      {
+        "titulo": "Pré-incubada no Hub de Inovação da UERR",
+        "ano": "2026"
+      }
+    ],
+    "links": {
+      "website": "https://florasense.rr.com.br",
+      "linkedin": "https://www.linkedin.com/company/florasense-rr",
+      "pitch_deck": "https://florasense.rr.com.br/deck"
+    },
+    "time": [
+      {
+        "nome": "Igor Meneses",
+        "cargo": "Fundador & Hardware Lead",
+        "formacao": "Engenharia Elétrica & Telecomunicações — UFRR",
+        "experiencia": "Pesquisador em comunicação via rádio de longo alcance (LoRa), sistemas de captação de energia fotovoltaica para sensores rurais e telemetria.",
+        "skills": ["LoRaWAN", "Hardware Design", "C/C++", "Sistemas de Energia Solar", "IoT"],
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      },
+      {
+        "nome": "Beatriz Nogueira",
+        "cargo": "Co-fundadora & Pesquisa Agronômica",
+        "formacao": "Engenharia Agronômica — UFRR",
+        "experiencia": "Especialista em manejo de solos e relações hídricas das culturas anuais nos solos de savana de Roraima, com foco em agricultura regenerativa.",
+        "skills": ["Manejo de Solos", "Agrometeorologia", "Modelagem Agronômica", "Agricultura de Precisão"],
+        "linkedin": "https://linkedin.com",
+        "github": ""
+      }
+    ]
+  }
+]
