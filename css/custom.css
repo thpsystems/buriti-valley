@@ -427,12 +427,14 @@ h1, h2, h3, h4, h5, h6 {
 .gradient-text {
   background: var(--gradient-text);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-gold-text {
   background: var(--gradient-amber);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1009,6 +1011,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.25rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1955,3 +1958,4 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2rem;
   }
 }
+
