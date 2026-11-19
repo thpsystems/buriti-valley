@@ -106,6 +106,10 @@
   --color-text-emerald: #34d399;
   --color-text-amber: #fbbf24;
 
+  /* Cores Oficiais da Identidade Visual Buriti Valley (Manual do Usuário) */
+  --color-brand-green: #056839;
+  --color-brand-wine: #621424;
+
   /* Cores de Destaque da Marca (Buriti & Amazônia) */
   --color-accent-emerald: #10b981;
   --color-accent-emerald-dark: #059669;
@@ -260,6 +264,34 @@ body {
   gap: 0.75rem;
   text-decoration: none;
   color: var(--color-text-primary);
+}
+
+.brand-logo-img {
+  height: 42px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+
+.brand:hover .brand-logo-img {
+  transform: scale(1.02);
+}
+
+.brand-logo-dark {
+  display: block;
+}
+
+.brand-logo-light {
+  display: none;
+}
+
+[data-theme="light"] .brand-logo-dark {
+  display: none;
+}
+
+[data-theme="light"] .brand-logo-light {
+  display: block;
 }
 
 .brand-icon {
