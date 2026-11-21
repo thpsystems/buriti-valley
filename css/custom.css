@@ -139,18 +139,364 @@
 
 /* Modo Claro Opcional */
 [data-theme="light"] {
-  --color-bg: #f8faf8;
-  --color-bg-secondary: #edf3ee;
-  --color-surface: rgba(255, 255, 255, 0.9);
-  --color-surface-hover: rgba(240, 248, 242, 0.95);
+  --color-bg: #f8fafc;
+  --color-bg-secondary: #f1f5f9;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f1f5f9;
   --color-surface-card: #ffffff;
   --color-surface-elevated: #ffffff;
-  --color-border: rgba(16, 185, 129, 0.22);
-  --color-border-hover: rgba(16, 185, 129, 0.5);
-  --color-text-primary: #062413;
-  --color-text-secondary: #475569;
+  --color-border: #cbd5e1;
+  --color-border-hover: #94a3b8;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #334155;
   --color-text-muted: #64748b;
-  --gradient-text: linear-gradient(135deg, #062413 0%, #059669 60%, #b45309 100%);
+  --color-text-emerald: #059669;
+  --color-text-amber: #b45309;
+  --gradient-text: linear-gradient(135deg, #0f172a 0%, #059669 60%, #b45309 100%);
+}
+
+[data-theme="light"] .dot-grid {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+}
+
+[data-theme="light"] .mesh-bg {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.02) 50%, transparent 70%);
+}
+
+[data-theme="light"] .mesh-bg-accent {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .nav-link {
+  color: #475569;
+}
+
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active {
+  color: #0f172a;
+}
+
+[data-theme="light"] .lang-switcher {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .lang-btn {
+  color: #475569;
+}
+
+[data-theme="light"] .lang-btn.active {
+  background: var(--color-accent-emerald);
+  color: #ffffff;
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+[data-theme="light"] .btn-secondary {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+[data-theme="light"] .btn-outline-amber {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #92400e;
+}
+
+[data-theme="light"] .btn-outline-amber:hover {
+  background: #fde68a;
+  border-color: #d97706;
+}
+
+[data-theme="light"] .pill-badge {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #047857;
+}
+
+[data-theme="light"] .pill-badge-amber {
+  background: #fef3c7;
+  border-color: #fde68a;
+  color: #b45309;
+}
+
+[data-theme="light"] .metrics-panel {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .metrics-header {
+  border-bottom-color: #e2e8f0;
+}
+
+[data-theme="light"] .metrics-header h3 {
+  color: #047857;
+}
+
+[data-theme="light"] .metric-box:not(:last-child) {
+  border-right-color: #e2e8f0;
+}
+
+[data-theme="light"] .ecosystem-breakdown {
+  border-top-color: #e2e8f0;
+}
+
+[data-theme="light"] .tag-cloud-item {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+[data-theme="light"] .tag-cloud-item strong {
+  color: #047857;
+}
+
+[data-theme="light"] .filters-container {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .search-input {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+[data-theme="light"] .search-input:focus {
+  background: #ffffff;
+  border-color: var(--color-accent-emerald);
+}
+
+[data-theme="light"] .search-icon {
+  color: #64748b;
+}
+
+[data-theme="light"] .filter-row-label {
+  color: #475569;
+}
+
+[data-theme="light"] .filter-chip {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+[data-theme="light"] .filter-chip:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+[data-theme="light"] .filter-chip.active {
+  background: var(--color-accent-emerald);
+  color: #ffffff;
+  border-color: var(--color-accent-emerald);
+}
+
+[data-theme="light"] .filter-meta-bar {
+  border-top-color: #e2e8f0;
+  color: #475569;
+}
+
+[data-theme="light"] .clear-filters-btn {
+  color: #b45309;
+}
+
+[data-theme="light"] .startup-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .startup-card:hover {
+  border-color: #10b981;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .card-footer {
+  border-top-color: #e2e8f0;
+}
+
+[data-theme="light"] .card-founders-preview {
+  color: #475569;
+}
+
+[data-theme="light"] .cta-box {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .cta-box-startup {
+  background: radial-gradient(circle at top left, rgba(16, 185, 129, 0.08), transparent 70%), #ffffff;
+  border-color: #86efac;
+}
+
+[data-theme="light"] .cta-box-investor {
+  background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.08), transparent 70%), #ffffff;
+  border-color: #fde68a;
+}
+
+[data-theme="light"] .dossier-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .dossier-header {
+  border-bottom-color: #e2e8f0;
+}
+
+[data-theme="light"] .award-item {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .award-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .award-title svg {
+  color: #d97706;
+}
+
+[data-theme="light"] .award-year {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+[data-theme="light"] .member-card {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .member-card:hover {
+  background: #ffffff;
+  border-color: #94a3b8;
+}
+
+[data-theme="light"] .member-academic {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  border-left: 3px solid #059669;
+  color: #334155;
+}
+
+[data-theme="light"] .member-academic strong {
+  color: #0f172a;
+}
+
+[data-theme="light"] .member-skill-tag {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+[data-theme="light"] .member-socials {
+  border-top-color: #e2e8f0;
+}
+
+[data-theme="light"] .member-social-link {
+  color: #475569;
+}
+
+[data-theme="light"] .member-social-link:hover {
+  color: #059669;
+}
+
+[data-theme="light"] .gov-pillar-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .gov-timeline-section {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .gov-eli-section {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .timeline-year-badge {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+[data-theme="light"] .criteria-section {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .criteria-item {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .criteria-item h4 {
+  color: #047857;
+}
+
+[data-theme="light"] .connect-tabs {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .connect-tab-btn {
+  color: #475569;
+}
+
+[data-theme="light"] .connect-form-panel {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-select,
+[data-theme="light"] .form-textarea {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-select:focus,
+[data-theme="light"] .form-textarea:focus {
+  background: #ffffff;
+  border-color: var(--color-accent-emerald);
+}
+
+[data-theme="light"] .footer {
+  border-top-color: #cbd5e1;
+  background: #ffffff;
+}
+
+[data-theme="light"] .footer-bottom {
+  border-top-color: #e2e8f0;
 }
 
 /* Reset Global */
