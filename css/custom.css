@@ -1345,12 +1345,12 @@ h1, h2, h3, h4, h5, h6 {
    Radar Buriti Valley (Destaque do Ciclo de 12h)
    ========================================================================== */
 .radar-section {
-  margin-top: 1.5rem;
-  margin-bottom: 3.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 3rem;
   background: linear-gradient(135deg, rgba(5, 104, 57, 0.08) 0%, rgba(245, 158, 11, 0.05) 100%);
-  border: 1px solid rgba(52, 211, 153, 0.25);
+  border: 1px solid rgba(52, 211, 153, 0.22);
   border-radius: var(--radius-xl);
-  padding: 2.25rem 2rem 2.5rem;
+  padding: 1.5rem 1.75rem 1.75rem;
   position: relative;
   overflow: hidden;
 }
@@ -1363,33 +1363,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .radar-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 1.75rem;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
   flex-wrap: wrap;
 }
 
 .radar-title-group {
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  align-items: center;
 }
 
 .radar-badge-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--color-text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .radar-pulse {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: var(--color-primary);
   box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
@@ -1403,7 +1402,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
   }
   100% {
     transform: scale(0.95);
@@ -1411,25 +1410,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.radar-subtitle {
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
-  max-width: 600px;
-  margin: 0;
-}
-
 .radar-status-notice {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
+  padding: 0.15rem 0.5rem;
   background: rgba(245, 158, 11, 0.15);
   border: 1px solid rgba(245, 158, 11, 0.35);
   color: #fbbf24;
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
-  margin-top: 0.35rem;
-  width: fit-content;
+  margin-left: 0.4rem;
 }
 
 [data-theme="light"] .radar-status-notice {
@@ -1443,52 +1434,113 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
+/* Botão discreto estilo letras miúdas */
 .radar-btn-toggle {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
   font-family: var(--font-sans);
-  font-size: 0.88rem;
-  font-weight: 600;
-  padding: 0.55rem 1.15rem;
-  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.45rem;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.3rem;
+  opacity: 0.75;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .radar-btn-toggle:hover {
-  background: var(--color-surface-hover);
-  color: var(--color-text-primary);
-  border-color: var(--color-primary);
-  transform: translateY(-1px);
+  opacity: 1;
+  color: var(--color-text-secondary);
 }
 
 .radar-btn-toggle.active {
-  background: rgba(245, 158, 11, 0.12);
-  border-color: #f59e0b;
   color: #fbbf24;
+  opacity: 1;
 }
 
 [data-theme="light"] .radar-btn-toggle.active {
-  background: #fef3c7;
-  color: #92400e;
-  border-color: #d97706;
+  color: #b45309;
 }
 
+/* Grid com os 4 agrupados na mesma linha em desktop */
 .radar-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
-/* Card customizado para o Radar */
+@media (max-width: 1080px) {
+  .radar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .radar-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card customizado para o Radar (mais compacto para caber 4 na linha) */
 .radar-card {
   border-color: rgba(52, 211, 153, 0.3);
   background: rgba(20, 24, 30, 0.7);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+}
+
+.radar-card .card-header {
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.radar-card .card-logo {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.radar-card .card-name {
+  font-size: 1.1rem;
+}
+
+.radar-card .card-tagline {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin-bottom: 0.85rem;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.radar-card .card-seeking-box {
+  padding: 0.5rem 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.radar-card .card-seeking-label {
+  font-size: 0.65rem;
+}
+
+.radar-card .card-seeking-badges {
+  gap: 0.3rem;
+}
+
+.radar-card .badge-goal {
+  font-size: 0.68rem;
+  padding: 0.15rem 0.45rem;
+}
+
+.radar-card .card-footer {
+  padding-top: 0.75rem;
+  font-size: 0.78rem;
 }
 
 .radar-card::before {
@@ -1502,19 +1554,22 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 16px rgba(5, 104, 57, 0.08);
 }
 
+/* Badge Destaque discreto no canto sem sobrepor texto */
 .radar-card-badge {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(245, 158, 11, 0.15);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  color: #fbbf24;
-  font-size: 0.7rem;
+  top: 0.65rem;
+  right: 0.65rem;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #f59e0b;
+  font-size: 0.62rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 0.2rem 0.55rem;
+  letter-spacing: 0.02em;
+  padding: 0.12rem 0.4rem;
   border-radius: 99px;
+  line-height: 1;
+  pointer-events: none;
 }
 
 [data-theme="light"] .radar-card-badge {
