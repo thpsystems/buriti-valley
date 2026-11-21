@@ -28,6 +28,12 @@ const translations = {
     metric_traction_sub: "Operações comerciais ativas",
     breakdown_verticals: "Verticais Líderes em Roraima",
     breakdown_network: "Rede de Fomento & Hubs Conectados",
+    radar_title: "Radar Buriti Valley",
+    radar_badge: "Destaque do Ciclo",
+    radar_desc: "4 startups selecionadas a cada 12 horas para visibilidade randômica e equitativa no ecossistema.",
+    radar_btn_prev: "⏪ Ver 4 em Destaque Anteriores",
+    radar_btn_curr: "⏩ Voltar para Destaques Atuais",
+    radar_viewing_prev: "Exibindo as 4 em destaque no ciclo anterior",
     vitrine_title: "Vitrine Interativa de Startups",
     vitrine_desc: "Utilize a busca textual e os filtros combináveis para encontrar startups por estágio de maturidade, vertical tecnológica ou objetivo de captação e parcerias.",
     search_placeholder: "Buscar por nome, vertical, tecnologia, desafio ou fundador...",
@@ -78,6 +84,12 @@ const translations = {
     metric_traction_sub: "Commercially active revenue generators",
     breakdown_verticals: "Leading Verticals in Roraima",
     breakdown_network: "Innovation Hubs & Grants Network",
+    radar_title: "Buriti Valley Radar",
+    radar_badge: "Cycle Spotlight",
+    radar_desc: "4 startups featured every 12 hours for equitable, randomized ecosystem spotlight.",
+    radar_btn_prev: "⏪ View 4 Previous Spotlight Startups",
+    radar_btn_curr: "⏩ Back to Current Spotlight Startups",
+    radar_viewing_prev: "Showing 4 spotlights from the previous cycle",
     vitrine_title: "Interactive Startup Showcase",
     vitrine_desc: "Use search and combinable filters to discover ventures by maturity stage, technology vertical, or active fundraising & acceleration goals.",
     search_placeholder: "Search by startup name, vertical, technology, challenge or founder...",
@@ -108,6 +120,7 @@ const translations = {
 
 let startupsData = [];
 let currentLang = localStorage.getItem('bv_lang') || 'pt';
+let isShowingPreviousRadar = false;
 let activeFilters = {
   estagio: 'Todos',
   objetivo: 'Todos',
@@ -115,12 +128,138 @@ let activeFilters = {
   searchQuery: ''
 };
 
+// Gerador Pseudo-aleatório semeado (Mulberry32) determinístico
+function mulberry32(seed) {
+  return function() {
+    let t = seed += 0x6D2B79F5;
+    t = Math.imul(t ^ t >>> 15, t | 1);
+    t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+// Retorna o índice do slot de 12 horas atual (epoch / 12h)
+function getCurrentSlot() {
+  const TWELVE_HOURS_MS = 12 * 60 * 60 * 1000;
+  return Math.floor(Date.now() / TWELVE_HOURS_MS);
+}
+
+// Seleciona 4 startups de forma determinística para um determinado slot
+function getFeaturedStartupsForSlot(slotOffset = 0) {
+  if (!startupsData || startupsData.length === 0) return [];
+  const targetSlot = getCurrentSlot() + slotOffset;
+  const rng = mulberry32(targetSlot);
+  
+  // Clone do array para embaralhamento Fisher-Yates com o PRNG
+  const shuffled = [...startupsData];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  
+  // Retorna até 4 startups
+  return shuffled.slice(0, Math.min(4, shuffled.length));
+}
+
+// Alterna a exibição do Radar entre ciclo atual e ciclo anterior
+function toggleRadarCycle() {
+  isShowingPreviousRadar = !isShowingPreviousRadar;
+  renderRadar();
+}
+
+// Renderiza a seção Radar Buriti Valley (4 em destaque a cada 12h)
+function renderRadar() {
+  const radarGrid = document.getElementById('radar-grid');
+  const radarBtn = document.getElementById('radar-toggle-btn');
+  const radarNotice = document.getElementById('radar-status-notice');
+  if (!radarGrid) return;
+
+  const t = translations[currentLang];
+  const offset = isShowingPreviousRadar ? -1 : 0;
+  const featured = getFeaturedStartupsForSlot(offset);
+
+  // Atualiza botão discreto
+  if (radarBtn) {
+    radarBtn.textContent = isShowingPreviousRadar ? t.radar_btn_curr : t.radar_btn_prev;
+    radarBtn.classList.toggle('active', isShowingPreviousRadar);
+  }
+
+  // Notificação sutil se estiver vendo as anteriores
+  if (radarNotice) {
+    if (isShowingPreviousRadar) {
+      radarNotice.style.display = 'inline-flex';
+      radarNotice.textContent = t.radar_viewing_prev;
+    } else {
+      radarNotice.style.display = 'none';
+      radarNotice.textContent = '';
+    }
+  }
+
+  // Gera cards do Radar
+  radarGrid.innerHTML = featured.map(item => {
+    const initials = item.logo_iniciais || item.nome.substring(0, 2).toUpperCase();
+    const stageClass = getStageBadgeClass(item.estagio);
+    const tagline = item.tagline ? (item.tagline[currentLang] || item.tagline.pt) : '';
+    const goalsHtml = (item.buscando || []).map(g => `
+      <span class="badge-goal ${getGoalBadgeClass(g)}">${g}</span>
+    `).join(' ');
+
+    return `
+      <a href="./startups/${item.slug}/" class="startup-card radar-card" aria-label="Ver detalhes da startup ${item.nome}">
+        <div class="radar-card-badge">⚡ ${t.radar_badge}</div>
+        <div>
+          <div class="card-header">
+            <div class="card-logo">${initials}</div>
+            <div class="card-title-group">
+              <div class="card-name">
+                <span>${item.nome}</span>
+                <span class="badge-stage ${stageClass}">${item.estagio}</span>
+              </div>
+              <div class="card-meta-row">
+                <span class="badge-vertical">${item.vertical}</span>
+                <span class="badge-vertical">${item.modelo_negocio || 'B2B'}</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="card-tagline">${tagline}</p>
+
+          <div class="card-seeking-box">
+            <span class="card-seeking-label">${t.card_seeking_lbl}</span>
+            <div class="card-seeking-badges">
+              ${goalsHtml}
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="card-founders-preview">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+            </svg>
+            <span>${(item.time && item.time[0]) ? item.time[0].nome : 'Roraima'}</span>
+          </div>
+          <div class="card-link-arrow">
+            <span>${t.card_view_dossier}</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
+    `;
+  }).join('');
+}
+
 // Carrega os dados de startups
 async function loadStartupsData() {
   try {
     const response = await fetch('./data/startups.json');
     if (!response.ok) throw new Error('Falha ao carregar data/startups.json');
     startupsData = await response.json();
+    renderRadar();
     renderVitrine();
   } catch (error) {
     console.error('Erro ao carregar startups:', error);
@@ -165,8 +304,9 @@ function switchLanguage(lang) {
     searchInput.placeholder = translations[lang].search_placeholder;
   }
 
-  // Re-renderiza a vitrine de startups com os textos do novo idioma
+  // Re-renderiza a vitrine e radar com os textos do novo idioma
   if (startupsData.length > 0) {
+    renderRadar();
     renderVitrine();
   }
 }

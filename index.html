@@ -183,6 +183,30 @@
       </div>
     </section>
 
+    <!-- Seção Radar Buriti Valley (4 em Destaque a cada 12h) -->
+    <section class="radar-section" id="radar">
+      <div class="radar-header">
+        <div class="radar-title-group">
+          <div class="radar-badge-pill">
+            <span class="radar-pulse"></span>
+            <span data-i18n="radar_title">Radar Buriti Valley</span>
+          </div>
+          <p class="radar-subtitle" data-i18n="radar_desc">
+            4 startups selecionadas a cada 12 horas para visibilidade randômica e equitativa no ecossistema.
+          </p>
+          <span id="radar-status-notice" class="radar-status-notice" style="display: none;"></span>
+        </div>
+        <div class="radar-actions">
+          <button id="radar-toggle-btn" class="radar-btn-toggle" onclick="toggleRadarCycle()" aria-label="Ver 4 em destaque anteriores" data-i18n="radar_btn_prev">
+            ⏪ Ver 4 em Destaque Anteriores
+          </button>
+        </div>
+      </div>
+      <div class="radar-grid" id="radar-grid">
+        <!-- Injetado dinamicamente via js/main.js -->
+      </div>
+    </section>
+
     <!-- Vitrine Interativa de Startups -->
     <section class="vitrine-section" id="vitrine">
       <div class="section-head">
