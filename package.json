@@ -4,7 +4,7 @@
   "description": "Plataforma Oficial da Buriti Valley — A Comunidade de Startups e Inovação de Roraima (Marco 1)",
   "scripts": {
     "build": "node scripts/build_startups.js",
-    "serve": "python3 -m http.server 8080"
+    "serve": "python3 -m http.server 8088"
   },
   "keywords": [
     "buriti-valley",
