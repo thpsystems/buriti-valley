@@ -8,8 +8,8 @@
     "modelo_negocio": "B2B / Marketplace",
     "buscando": ["Investimento", "Parcerias"],
     "tagline": {
-      "pt": "Ecossistema completo de gestão, fidelidade e delivery sem taxas abusivas para o mercado de food service.",
-      "en": "All-in-one management, loyalty, and fair-rate delivery ecosystem for the food service industry."
+      "pt": "Ecossistema completo de gestão comercial, fidelidade e delivery sem taxas abusivas para o food service nacional, conectando PDV em nuvem, controle fiscal e marketplace unificado.",
+      "en": "All-in-one management, customer loyalty, and fair-rate delivery ecosystem for food service, unifying cloud POS, fiscal management, and a national marketplace."
     },
     "problema": {
       "pt": "Altas taxas de comissão (de até 27%) cobradas por grandes marketplaces de delivery sufocam bares e restaurantes, além da fragmentação de softwares de caixa, estoque e fidelização de clientes.",
@@ -89,8 +89,8 @@
     "modelo_negocio": "B2B",
     "buscando": ["Investimento", "Aceleração"],
     "tagline": {
-      "pt": "Tecnologia de precisão e mecanização sustentável para a colheita e pós-colheita de açaí nativo e de cultivo na Amazônia.",
-      "en": "Precision technology and sustainable mechanization for harvesting native and cultivated açaí across the Amazon."
+      "pt": "Tecnologia de precisão e mecanização sustentável para a colheita e pós-colheita de açaí na Amazônia, eliminando a escalada de palmeiras e triplicando o rendimento seguro em campo.",
+      "en": "Precision technology and sustainable mechanization for açaí harvesting across the Amazon, eliminating tree climbing and tripling safe yield on the ground."
     },
     "problema": {
       "pt": "A colheita tradicional do açaí na Amazônia depende da escalada manual de palmeiras de até 20 metros, gerando alto risco de acidentes de trabalho, gargalo de produtividade e perda de até 35% dos frutos.",
@@ -161,8 +161,8 @@
     "modelo_negocio": "B2B / B2B2C",
     "buscando": ["Investimento", "Parcerias"],
     "tagline": {
-      "pt": "Agroindústria amazônica de polpas e superfrutos com rastreabilidade da floresta à mesa e impacto em +30 famílias extrativistas.",
-      "en": "Amazonian agroindustry for pulp and superfruits with forest-to-table traceability impacting 30+ riverine families."
+      "pt": "Agroindústria amazônica de polpas e superfrutos com rastreabilidade da floresta à mesa, combinando mini-hubs fluviais solares e impacto socioeconômico em mais de 30 famílias extrativistas.",
+      "en": "Amazonian agroindustry for fruit pulp with forest-to-table traceability, featuring solar riverine mini-hubs and socio-environmental impact across 30+ forest families."
     },
     "problema": {
       "pt": "Comunidades ribeirinhas e extrativistas de Roraima sofrem com intermediários abusivos e falta de estrutura de congelamento rápido, enquanto indústrias nacionais buscam bioingredientes com procedência verificada e certificada.",
@@ -233,8 +233,8 @@
     "modelo_negocio": "B2B",
     "buscando": ["Investimento", "Parcerias"],
     "tagline": {
-      "pt": "Primeira biofábrica de mudas clonadas in vitro de Roraima, garantindo sanidade fitossanitária e alta produtividade.",
-      "en": "Roraima's first in-vitro cloned plant biofactory, ensuring complete phytosanitary health and higher crop yields."
+      "pt": "Primeira biofábrica de mudas clonadas in vitro de Roraima. Desenvolve clones selecionados de alta produtividade livres de vírus e pragas para banana, abacaxi, açaí, pitaia e orquídeas nativas.",
+      "en": "Roraima's first in-vitro cloned plant biofactory. Propagates high-yield, disease-free certified cultivars for banana, pineapple, açaí, pitaya, and native Amazonian orchids."
     },
     "problema": {
       "pt": "Produtores rurais de Roraima dependiam da importação de mudas de outros estados via frete interestadual com alto custo logístico e perda de até 40% na aclimatação, além do risco constante de introdução de pragas e vírus agrícolas.",
@@ -305,8 +305,8 @@
     "modelo_negocio": "SaaS / DaaS B2B",
     "buscando": ["Investimento", "Parcerias"],
     "tagline": {
-      "pt": "Plataformas proprietárias de inteligência preditiva, modelagem probabilística e arquitetura distribuída para logística e saúde.",
-      "en": "Proprietary predictive intelligence, probabilistic modeling, and distributed software platforms for logistics and health."
+      "pt": "Plataformas proprietárias de inteligência preditiva, modelagem probabilística e sistemas distribuídos offline-first para logística de fronteira (ArcoNorte Nexus) e saúde feminina de precisão.",
+      "en": "Proprietary predictive intelligence, probabilistic modeling, and offline-first distributed platforms for frontier logistics (ArcoNorte Nexus) and precision female health analytics."
     },
     "problema": {
       "pt": "Cadeias logísticas de fronteira (Arco Norte) e monitoramento de saúde reprodutiva sofrem com conectividade intermitente, falta de integração preditiva de dados e dependência de ferramentas genéricas sem inteligência de contexto.",
