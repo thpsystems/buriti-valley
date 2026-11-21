@@ -225,72 +225,72 @@
     ]
   },
   {
-    "slug": "lavrado-biotech",
-    "nome": "Lavrado Biotech",
-    "logo_iniciais": "LB",
-    "vertical": "Saúde",
-    "estagio": "MVP",
+    "slug": "biotech-mudas",
+    "nome": "Biotech Mudas",
+    "logo_iniciais": "BM",
+    "vertical": "Bioeconomia",
+    "estagio": "Tração",
     "modelo_negocio": "B2B",
-    "buscando": ["Aceleração", "Investimento"],
+    "buscando": ["Investimento", "Parcerias"],
     "tagline": {
-      "pt": "Bioprospecção de ativos medicinais do bioma Lavrado para dermocosméticos e fitoterápicos de alta performance.",
-      "en": "Bioprospecting medicinal assets from the Lavrado biome for high-performance dermocosmetics and therapeutics."
+      "pt": "Primeira biofábrica de mudas clonadas in vitro de Roraima, garantindo sanidade fitossanitária e alta produtividade.",
+      "en": "Roraima's first in-vitro cloned plant biofactory, ensuring complete phytosanitary health and higher crop yields."
     },
     "problema": {
-      "pt": "A indústria farmacêutica e dermocosmética global demanda moléculas vegetais inovadoras com atividade antioxidante e anti-inflamatória comprovada, mas o bioma Lavrado (savana de Roraima) permanece cientificamente inexplorado comercialmente.",
-      "en": "The global pharma and skincare industry requires novel plant molecules with proven antioxidant and anti-inflammatory activity, yet the Lavrado biome remains largely untapped for commercial bioscience."
+      "pt": "Produtores rurais de Roraima dependiam da importação de mudas de outros estados via frete interestadual com alto custo logístico e perda de até 40% na aclimatação, além do risco constante de introdução de pragas e vírus agrícolas.",
+      "en": "Roraima farmers previously relied on interstate plantlet imports with severe freight costs and up to 40% acclimatization loss, along with persistent risks of introducing crop diseases."
     },
     "solucao": {
-      "pt": "Plataforma de triagem biológica e extração verde por fluido supercrítico que isola metabólitos secundários de espécies endêmicas do Lavrado, gerando extratos padronizados prontos para validação clínica.",
-      "en": "Biological screening and supercritical green extraction platform isolating secondary metabolites from endemic Lavrado species, producing standardized extracts for clinical validation."
+      "pt": "Biofábrica local com laboratório de biotecnologia vegetal e micropropagação in vitro, multiplicando clones selecionados a partir das matrizes mais produtivas do estado com sanidade 100% controlada.",
+      "en": "Local commercial biofactory with plant biotechnology tissue culture, propagating cloned cultivars from top-performing local mother plants with 100% disease-free certification."
     },
     "diferencial": {
-      "pt": "Patente provisional de processo de extração verde depositada no INPI, matriz de bioensaio in vitro proprietária e associação com o ecossistema ConectaHealth.",
-      "en": "Provisional green extraction patent filed with INPI, proprietary in vitro bioassay matrix, and strategic integration with the ConectaHealth hub."
+      "pt": "Primeira e única biofábrica de micropropagação comercial instalada em Roraima, reduzindo perdas de aclimatação para menos de 5% e aumentando a produtividade agrícola em até 30% com mudas de banana, abacaxi, açaí, pitaia e orquídeas nativas.",
+      "en": "First and only commercial plant micropropagation biofactory in Roraima, slashing acclimatization loss below 5% and boosting harvest yields by up to 30% across banana, pineapple, açaí, pitaya, and native orchids."
     },
     "metricas_destaque": {
-      "pt": "Aprovada Centelha II RR (R$ 60k subvenção) | 2 Depósitos de Patente INPI | Validação in vitro com 94% de inibição oxidativa",
-      "en": "Awarded Centelha II RR grant (R$ 60k) | 2 INPI patent filings | In-vitro validation showing 94% oxidative stress inhibition"
+      "pt": "Pioneira em RR | Graduada no Inova Amazônia (Sebrae) | +30% em produtividade agrícola local",
+      "en": "1st Biofactory in RR | Accelerated by Inova Amazônia (Sebrae) | +30% boost in local crop yield"
     },
     "pedido_atual": {
-      "pt": "Captação Pre-Seed de R$ 380k e parceria com aceleradora setorial de Biotecnologia para ensaios toxicológicos e registro na ANVISA.",
-      "en": "Pre-Seed round of R$ 380k and partnership with a dedicated Biotech accelerator for regulatory toxicology assays and ANVISA registration."
+      "pt": "Captação Seed de R$ 800k para ampliação da câmara fria de aclimatação e automação robótica de inoculação em laboratório.",
+      "en": "Seed round of R$ 800k to expand controlled greenhouse acclimatization and introduce automated sterile inoculation in the lab."
     },
     "premiacoes": [
       {
-        "titulo": "Aprovada no Programa Centelha II Roraima (Faperr / Finep)",
+        "titulo": "Aprovada e Acelerada no Programa Inova Amazônia (Sebrae)",
+        "ano": "2023"
+      },
+      {
+        "titulo": "Aceleração Internacional de Bioeconomia com Beta-i",
         "ano": "2024"
       },
       {
-        "titulo": "Selecionada no Hub ConectaHealth Amazônia",
-        "ano": "2025"
-      },
-      {
-        "titulo": "1º Lugar Pitch Universitário Centro de Inovação UFRR",
+        "titulo": "Destaque Estadual em Biotecnologia e Agricultura Familiar",
         "ano": "2024"
       }
     ],
     "links": {
-      "website": "https://lavradobiotech.com.br",
-      "linkedin": "https://www.linkedin.com/company/lavrado-biotech",
-      "pitch_deck": "https://lavradobiotech.com.br/deck"
+      "website": "https://biotechmudas.com.br",
+      "linkedin": "https://www.linkedin.com/company/biotech-mudas",
+      "pitch_deck": "https://biotechmudas.com.br/deck"
     },
     "time": [
       {
-        "nome": "Dra. Renata Vasconcelos",
-        "cargo": "Chief Scientific Officer (CSO)",
-        "formacao": "Doutorado em Bioquímica e Biologia Molecular — UFRR / Unicamp",
-        "experiencia": "Mais de 10 anos de pesquisa translacional em fitocompostos do cerrado e savana amazônica, com 14 artigos internacionais publicados.",
-        "skills": ["Biologia Molecular", "Bioquímica Analítica", "Propriedade Intelectual", "ANVISA"],
+        "nome": "Maria Araújo",
+        "cargo": "Co-fundadora & Diretora Científica",
+        "formacao": "Ciências Biológicas com Especialização em Biotecnologia Vegetal",
+        "experiencia": "Pioneira em biotecnologia e micropropagação in vitro em Roraima, liderando a implementação do primeiro laboratório comercial de cultura de tecidos vegetais do estado.",
+        "skills": ["Cultura de Tecidos", "Micropropagação Vegetal", "Fitossanidade", "Biotecnologia"],
         "linkedin": "https://linkedin.com",
         "github": ""
       },
       {
-        "nome": "Guilherme Sampaio",
-        "cargo": "CEO & Head de Negócios",
-        "formacao": "Farmácia Industrial — UFRR | MBA em Gestão da Inovação — FGV",
-        "experiencia": "Ex-gerente de qualidade em indústria farmacêutica com experiência em parcerias B2B e contratos de transferência de tecnologia.",
-        "skills": ["Transferência de Tecnologia", "Regulatório Farmacêutico", "Vendas B2B", "Pitch de Investimento"],
+        "nome": "Maria Isabel",
+        "cargo": "Co-fundadora & Diretora de Operações",
+        "formacao": "Ciências Biológicas e Gestão de Bioempresas",
+        "experiencia": "Especialista em processos de aclimatização em viveiros e gestão de parcerias estratégicas com cooperativas rurais e pequenos produtores de Roraima.",
+        "skills": ["Aclimatização Vegetal", "Gestão de Biofábrica", "Relacionamento com Produtores", "Bioeconomia"],
         "linkedin": "https://linkedin.com",
         "github": ""
       }
