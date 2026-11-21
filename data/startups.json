@@ -297,74 +297,65 @@
     ]
   },
   {
-    "slug": "macungov",
-    "nome": "MacunGov",
-    "logo_iniciais": "MG",
-    "vertical": "GovTech",
+    "slug": "thp-deeptech",
+    "nome": "THP DeepTech & Systems",
+    "logo_iniciais": "THP",
+    "vertical": "DeepTech",
     "estagio": "Operação",
-    "modelo_negocio": "B2G / B2B",
-    "buscando": ["Parcerias", "Aceleração"],
+    "modelo_negocio": "SaaS / DaaS B2B",
+    "buscando": ["Investimento", "Parcerias"],
     "tagline": {
-      "pt": "Plataforma de interoperabilidade e desburocratização tributária e territorial para municípios da Amazônia Setentrional.",
-      "en": "Interoperability and municipal tax/land registry modernization platform for the Northern Amazon region."
+      "pt": "Plataformas proprietárias de inteligência preditiva, modelagem probabilística e arquitetura distribuída para logística e saúde.",
+      "en": "Proprietary predictive intelligence, probabilistic modeling, and distributed software platforms for logistics and health."
     },
     "problema": {
-      "pt": "Municípios do interior de Roraima e da região de fronteira enfrentam descontinuidade de dados cadastrais, arrecadação municipal defasada e semanas de lentidão para concessão de alvarás comerciais e certidões.",
-      "en": "Northern interior municipalities face fragmented cadastre databases, depressed local tax collection, and weeks of bureaucratic delay for business licensing and land permits."
+      "pt": "Cadeias logísticas de fronteira (Arco Norte) e monitoramento de saúde reprodutiva sofrem com conectividade intermitente, falta de integração preditiva de dados e dependência de ferramentas genéricas sem inteligência de contexto.",
+      "en": "Frontier supply chains (Arco Norte) and reproductive health analytics suffer from intermittent connectivity, fragmented data, and generic tools lacking contextual intelligence."
     },
     "solucao": {
-      "pt": "SaaS B2G modular que conecta georreferenciamento urbano por satélite, emissão instantânea de alvarás digitais integrados à RedeSim e módulo de conciliação fiscal automática via Pix.",
-      "en": "Modular B2G SaaS connecting satellite urban cadastre, instant business license issuance integrated with national portals, and automated Pix tax clearing."
+      "pt": "Ecossistema de plataformas de software proprietárias de alta complexidade com inteligência preditiva e arquitetura offline-first — como ArcoNorte Nexus (logística e comércio exterior) e Rythma / H.O.R.M.O.S. (biomatemática em saúde feminina).",
+      "en": "High-complexity proprietary software ecosystem powered by predictive AI and offline-first architecture — featuring ArcoNorte Nexus (frontier logistics) and Rythma / H.O.R.M.O.S. (biomathematical female health analytics)."
     },
     "diferencial": {
-      "pt": "Arquitetura offline-first otimizada para conexões de baixa largura de banda comuns na calha dos rios e zonas rurais, com compliance total com a LGPD e Lei de Governo Digital.",
-      "en": "Offline-first sync architecture optimized for low-bandwidth frontier networks, with full compliance to LGPD and the Brazilian Digital Government Framework."
+      "pt": "Desenvolvimento com registro formal de Propriedade Intelectual (INPI), fundamentação biomatemática e econométrica rigorosa com publicação científica, e engenharia de software distribuída operando a partir de Boa Vista/RR.",
+      "en": "Proprietary intellectual property registered at INPI, rigorous biomathematical and econometric foundation backed by academic research, and distributed software engineering engineered from Boa Vista/RR."
     },
     "metricas_destaque": {
-      "pt": "Incubada na Koneka (IFRR) | 4 Municípios pilotos em Roraima | Redução de 18 para 2 dias na emissão de alvarás de baixo risco",
-      "en": "Incubated at Koneka (IFRR) | 4 Pilot municipalities in Roraima | Reduced low-risk business licensing from 18 to 2 days"
+      "pt": "CNPJ 63.580.847/0001-02 | Registro de Software INPI | 4 Plataformas Proprietárias Ativas",
+      "en": "Registered Corporation in RR | INPI Software Copyright Filed | 4 Active Proprietary Platforms"
     },
     "pedido_atual": {
-      "pt": "Buscando parceiros institucionais para expansão do consórcio municipal interfronteira e aceleração em programa especializado em GovTech.",
-      "en": "Seeking institutional partners to expand cross-border municipal pilots and entry into specialized GovTech acceleration programs."
+      "pt": "Captação Seed para expansão comercial da plataforma ArcoNorte Nexus no corredor Arco Norte e licenciamento clínico B2B2C do ecossistema Rythma.",
+      "en": "Seed round to accelerate ArcoNorte Nexus commercial rollout across Northern logistics corridors and scale B2B2C clinical licensing for Rythma."
     },
     "premiacoes": [
       {
-        "titulo": "Graduada no Programa de Incubação Koneka — IFRR",
+        "titulo": "Certificado de Registro de Programa de Computador — INPI",
         "ano": "2025"
       },
       {
-        "titulo": "Finalista Prêmio Nacional de Inovação em Gestão Pública",
-        "ano": "2026"
+        "titulo": "Pesquisa & Produção Intelectual de Ponta em Fronteiras e IA — UFRR",
+        "ano": "2024"
       },
       {
-        "titulo": "Reconhecimento Cidades Inteligentes da Amazônia",
+        "titulo": "Plataforma de Logística Preditiva Destaque no Arco Norte",
         "ano": "2025"
       }
     ],
     "links": {
-      "website": "https://macungov.com.br",
-      "linkedin": "https://www.linkedin.com/company/macungov",
-      "pitch_deck": "https://macungov.com.br/deck"
+      "website": "https://thpsystems.com.br",
+      "linkedin": "https://www.linkedin.com/in/hiago-pereira-5705212a3",
+      "pitch_deck": "https://thpsystems.com.br/#plataformas"
     },
     "time": [
       {
-        "nome": "Fabrício Albuquerque",
-        "cargo": "CEO & Tech Lead",
-        "formacao": "Tecnologia em Análise e Desenvolvimento de Sistemas — IFRR",
-        "experiencia": "8 anos de desenvolvimento de software no setor público, especialista em integrações tributárias e interoperabilidade de dados abertos.",
-        "skills": ["Python", "FastAPI", "PostgreSQL/GIS", "Governo Digital", "Segurança da Informação"],
-        "linkedin": "https://linkedin.com",
-        "github": "https://github.com"
-      },
-      {
-        "nome": "Dra. Carolina Freitas",
-        "cargo": "Head de Relações Institucionais e Compliance",
-        "formacao": "Direito — UFRR | Especialização em Direito Tributário e Administrativo",
-        "experiencia": "Advogada com trajetória em consultoria jurídica municipal, convênios públicos e estruturação de editais de inovação e contratações GovTech.",
-        "skills": ["Direito Público", "Marco Legal das Startups", "LGPD", "Relações Governamentais"],
-        "linkedin": "https://linkedin.com",
-        "github": ""
+        "nome": "Hiago Pereira",
+        "cargo": "Fundador, CEO & Chief Architect",
+        "formacao": "Mestre em Sociedade e Fronteiras (PPGSOF-UFRR) | Especialista em IA (ECAI-UFRR) & Agronegócio (ITEAM-PMBV) | Internacionalista (UFRR)",
+        "experiencia": "Pesquisador e arquiteto de software na interseção entre engenharia de sistemas distribuídos, Inteligência Artificial e estratégia de comércio exterior e fronteiras. Lidera a concepção científica, arquitetura de sistemas e registro de PI da THP.",
+        "skills": ["Inteligência Artificial", "Arquitetura de Software", "Sistemas Distribuídos", "Modelagem Preditiva", "Comércio Internacional"],
+        "linkedin": "https://www.linkedin.com/in/hiago-pereira-5705212a3",
+        "github": "https://github.com/thpsystems"
       }
     ]
   },
