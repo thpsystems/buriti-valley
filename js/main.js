@@ -234,14 +234,7 @@ function renderRadar() {
         </div>
 
         <div class="card-footer">
-          <div class="card-founders-preview">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-            </svg>
-            <span>${(item.time && item.time[0]) ? item.time[0].nome : 'Roraima'}</span>
-          </div>
-          <div class="card-link-arrow">
+          <div class="card-link-arrow" style="width: 100%; justify-content: flex-end;">
             <span>${t.card_view_dossier}</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -437,14 +430,7 @@ function renderVitrine() {
         </div>
 
         <div class="card-footer">
-          <div class="card-founders-preview">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-            </svg>
-            <span>${foundersNames ? 'Time: ' + foundersNames : 'Roraima'}</span>
-          </div>
-          <div class="card-link-arrow">
+          <div class="card-link-arrow" style="width: 100%; justify-content: flex-end;">
             <span>${t.card_view_dossier}</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <line x1="5" y1="12" x2="19" y2="12"></line>
