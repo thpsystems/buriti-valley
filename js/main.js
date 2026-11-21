@@ -36,6 +36,8 @@ const translations = {
     vitrine_title: "Vitrine Interativa de Startups",
     vitrine_desc: "Utilize a busca textual e os filtros combináveis para encontrar startups por estágio de maturidade, vertical tecnológica ou objetivo de captação e parcerias.",
     search_placeholder: "Buscar por nome, vertical, tecnologia, desafio ou fundador...",
+    vitrine_idle_title: "Explore o Ecossistema Completo",
+    vitrine_idle_desc: "Digite uma palavra-chave acima ou selecione um filtro por estágio, vertical ou objetivo para visualizar as startups mapeadas.",
     filter_stage: "Estágio:",
     filter_goal: "Buscando:",
     filter_vertical: "Vertical:",
@@ -91,6 +93,8 @@ const translations = {
     vitrine_title: "Interactive Startup Showcase",
     vitrine_desc: "Use search and combinable filters to discover ventures by maturity stage, technology vertical, or active fundraising & acceleration goals.",
     search_placeholder: "Search by startup name, vertical, technology, challenge or founder...",
+    vitrine_idle_title: "Explore the Full Ecosystem",
+    vitrine_idle_desc: "Type a keyword above or pick a filter by stage, vertical, or goal to reveal matching startups.",
     filter_stage: "Stage:",
     filter_goal: "Seeking:",
     filter_vertical: "Vertical:",
@@ -330,7 +334,31 @@ function renderVitrine() {
 
   const t = translations[currentLang];
 
-  // Aplica filtros combináveis
+  // Verifica se o usuário aplicou algum filtro ativo ou digitou algo na busca
+  const hasActiveFilters = 
+    activeFilters.estagio !== 'Todos' ||
+    activeFilters.objetivo !== 'Todos' ||
+    activeFilters.vertical !== 'Todas' ||
+    activeFilters.searchQuery.trim() !== '';
+
+  // Se nenhum filtro foi acionado, exibe estado de convite à busca (startups em repouso)
+  if (!hasActiveFilters) {
+    if (countEl) {
+      countEl.textContent = currentLang === 'pt' 
+        ? "Selecione um filtro ou pesquise para visualizar os resultados" 
+        : "Select a filter or search to reveal results";
+    }
+    grid.innerHTML = `
+      <div class="empty-state idle-state" style="grid-column: 1 / -1; padding: 3rem 1.5rem;">
+        <div class="empty-state-icon" style="font-size: 2.4rem; margin-bottom: 0.75rem;">🧭</div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;">${t.vitrine_idle_title}</h3>
+        <p style="color: var(--color-text-secondary); max-width: 520px; margin: 0 auto 1.5rem; font-size: 0.95rem;">${t.vitrine_idle_desc}</p>
+      </div>
+    `;
+    return;
+  }
+
+  // Aplica filtros combináveis quando acionados
   const filtered = startupsData.filter(item => {
     // Filtro Estágio
     if (activeFilters.estagio !== 'Todos') {
