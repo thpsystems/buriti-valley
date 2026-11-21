@@ -204,14 +204,17 @@ function renderRadar() {
 
     return `
       <a href="./startups/${item.slug}/" class="startup-card radar-card" aria-label="Ver detalhes da startup ${item.nome}">
-        <div class="radar-card-badge">⚡ ${t.radar_badge}</div>
         <div>
+          <div class="radar-card-topbar">
+            <span class="badge-stage ${stageClass}">${item.estagio}</span>
+            <span class="radar-card-badge">⚡ ${t.radar_badge}</span>
+          </div>
+
           <div class="card-header">
             <div class="card-logo">${initials}</div>
             <div class="card-title-group">
               <div class="card-name">
                 <span>${item.nome}</span>
-                <span class="badge-stage ${stageClass}">${item.estagio}</span>
               </div>
               <div class="card-meta-row">
                 <span class="badge-vertical">${item.vertical}</span>
